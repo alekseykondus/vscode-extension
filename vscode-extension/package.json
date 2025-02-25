@@ -1,0 +1,73 @@
+{
+  "name": "new-extension",
+  "displayName": "new-extension",
+  "description": "new-extension",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "new-extension.generateCodeDocumentation",
+        "title": "Generate code documentation"
+      },
+      {
+        "command": "new-extension.refactorCode",
+        "title": "Refactor Code"
+      },
+      {
+        "command": "new-extension.generateExplanation",
+        "title": "Generate explanation"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "new-extension.generateCodeDocumentation",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        },
+        {
+          "command": "new-extension.refactorCode",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        },
+        {
+          "command": "new-extension.generateExplanation",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/mocha": "^10.0.10",
+    "@types/node": "20.x",
+    "@types/vscode": "^1.97.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "eslint": "^9.19.0",
+    "java-parser": "^2.3.3",
+    "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "@babel/parser": "^7.23.0",
+    "dotenv": "^16.4.7",
+    "openai": "^4.85.4",
+    "tree-sitter": "^0.21.1",
+    "tree-sitter-java": "^0.23.5"
+  }
+}
