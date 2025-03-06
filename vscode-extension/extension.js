@@ -3,14 +3,14 @@ const OpenAI = require("openai");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 // Залежності для парсингу AST
-const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
-// Временно без python const PythonAst = require("ast"); // Для Python (вимагає додаткової інтеграції з Python через child_process)
+// TODO: Для JavaScript const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
 const { extractJavadocsFromProcessed, insertJavadocsUsingAST } = require("./javadocInserter");
+const { extractDocstringsFromProcessed, insertDocstringsUsingAST } = require("./pythondocInserter");
 
 // TODO: добавить поддержку для больше языков программирования, поправить prompts и протестировать
 const documentationPrompts = {
     javascript: "Generate detailed documentation for the following JavaScript code without modifying the original code. Add the documentation as JSDoc comments above the relevant functions, classes, or variables. Include a description of the purpose, parameters, return values, and usage examples in JSDoc format.",
-    python: "Create comprehensive documentation for the following Python code without altering the original code. Add the documentation as docstrings in Google style above the relevant functions or classes. Include a function/class description, parameters, return values, and examples, leaving the code itself unchanged.",
+    python: "Generate detailed documentation for the following Python code while keeping the original code unchanged. Use Google-style docstrings and place them directly above the corresponding functions or classes. Each docstring should include a concise description, parameter explanations (Args:), return values (Returns:). Ensure clarity and completeness while preserving the code structure.",
     java: "Produce detailed documentation for the following Java code without changing the original code. Add the documentation as Javadoc comments above the relevant classes, methods, or fields. Include descriptions of the class/method purpose, parameters, return types, exceptions, and examples, preserving the code as is.",
     default: "Generate detailed documentation for the following code without modifying the original code. Add the documentation as comments above the relevant sections, including a description of its purpose, inputs, outputs, and a simple usage example, while keeping the code unchanged."
 };
@@ -69,7 +69,15 @@ function extractDocumentation(originalCode, processedCode, languageId) {
             console.log("Extracted Javadocs:", javadocs);
             updatedCode = insertJavadocsUsingAST(originalCode, javadocs);
             console.log("Updated Code:\n", updatedCode);
-        } else {
+        }
+        else if (languageId === "python") {
+            console.log("Started building AST for Python");
+            const docstrings = extractDocstringsFromProcessed(processedCode);
+            console.log("Extracted Docstrings:", docstrings);
+            updatedCode = insertDocstringsUsingAST(originalCode, docstrings);
+            console.log("Updated Code:\n", updatedCode);
+        }
+        else {
             console.log(`No processing implemented for language: ${languageId}. Returning original code.`);
         }
     } catch (error) {
