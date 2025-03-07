@@ -4,6 +4,14 @@ const Java = require("tree-sitter-java");
 function extractJavadocsFromProcessed(code) {
     const parser = new Parser();
     parser.setLanguage(Java);
+
+    // let cleanedCode = code;
+    // const codeBlockStart = cleanedCode.indexOf("```java");
+    // if (codeBlockStart !== -1) {
+    //     const codeBlockEnd = cleanedCode.lastIndexOf("```");
+    //     cleanedCode = cleanedCode.substring(codeBlockStart + 7, codeBlockEnd).trim();
+    // }
+
     const tree = parser.parse(code);
     //console.log("Processed AST:", tree.rootNode.toString());
 
