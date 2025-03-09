@@ -7,6 +7,16 @@ const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY, 
 });
 
+const deepseek = new OpenAI({
+    baseURL: 'https://api.deepseek.com',
+    apiKey: process.env.DEEPSEEK_API_KEY,
+});
+
+const grok = new OpenAI({
+    baseURL: "https://api.x.ai/v1",
+    apiKey: process.env.XAI_API_KEY
+});
+
 async function getChatGPTResponse(code, prompt, currentModel) {
     try {
         const response = await openai.chat.completions.create({
@@ -60,12 +70,50 @@ async function getGrokResponse(code, prompt) {
     }
 }
 
+async function getGrokResponse_2(code, prompt) {
+    try {
+        const completion = await grok.chat.completions.create({
+            model: "grok-2-latest",
+            messages: [
+                { role: "system", content: "You are Grok, created by xAI." },
+                { role: "user", content: `${prompt}\n\n${code}` }
+            ],
+            temperature: 0.7
+        });
+        const rawContent = completion.choices[0].message.content;
+        return cleanCodeFromMarkdown(rawContent);
+    } catch (error) {
+        console.error("Помилка при запиті до Grok API:", error.response ? error.response.data : error.message);
+        return "Error retrieving response from Grok.";
+    }
+}
+
+
+async function getDeepseekResponse(code, prompt) {
+    try {
+        const response = await deepseek.chat.completions.create({
+            model: "deepseek-chat",
+            messages: [
+                { role: "system", content: "You are a helpful assistant." },
+                { role: "user", content: `${prompt}\n\n${code}` }
+            ],
+            temperature: 0.7,
+        });
+        const rawContent = response.choices[0].message.content;
+        return cleanCodeFromMarkdown(rawContent);
+    } catch (error) {
+        console.error("Error requesting Deepseek API:", error);
+        return "Error retrieving response from Deepseek.";
+    }
+}
+
 function checkModelByTokenCount(code, currentModel, vscode) {
     const enc = encoding_for_model("gpt-3.5-turbo");
     const tokenCount = enc.encode(code).length;
     enc.free();
     const GPT_3_5_TURBO_LIMIT = 4000;
     const GPT_3_5_TURBO_16K_LIMIT = 16000;
+    const DEEPSEEK_LIMIT = 8000;
     const GROK_LIMIT = 64000;
     console.log("tokenCount", tokenCount);
     console.log("currentModel", currentModel);
@@ -78,9 +126,16 @@ function checkModelByTokenCount(code, currentModel, vscode) {
         return "gpt-3.5-turbo-16k";
     }
 
+    if (tokenCount <= DEEPSEEK_LIMIT) {
+        if (currentModel !== "deepseek-chat") {
+            vscode.window.showInformationMessage("The code exceeds limits. Switching to deepseek-chat for processing.");
+        }
+        return "deepseek-chat";
+    }
+
     if (tokenCount <= GROK_LIMIT) {
         if (currentModel != "grok-2-latest") {
-            vscode.window.showInformationMessage("The code exceeds GPT limits. Switching to grok-2-latest for processing.");
+            vscode.window.showInformationMessage("The code exceeds limits. Switching to grok-2-latest for processing.");
         }
         console.log("return grok-2-latest");
         return "grok-2-latest";
@@ -94,9 +149,14 @@ async function getAIResponse(code, prompt, currentModel) {
     console.log("Model that will be used:", currentModel);
     if (currentModel === "gpt-3.5-turbo" || currentModel === "gpt-3.5-turbo-16k") {
         return await getChatGPTResponse(code, prompt, currentModel);
-    } else if (currentModel === "grok-2-latest") {
+    } 
+    else if (currentModel === "grok-2-latest") {
         return await getGrokResponse(code, prompt);
-    } else {
+    } 
+    else if (currentModel === "deepseek-chat") {
+        return await getDeepseekResponse(code, prompt);
+    } 
+    else {
         console.error("Невідома модель:", currentModel);
         return "Error: Unknown model.";
     }

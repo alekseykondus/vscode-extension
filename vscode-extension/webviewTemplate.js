@@ -100,6 +100,7 @@ function getWebviewContent(code, currentModel) {
             <select id="model" onchange="changeModel()">
                 <option value="gpt-3.5-turbo" ${(currentModel === "gpt-3.5-turbo" || currentModel === "gpt-3.5-turbo-16k") ? "selected" : ""}>GPT-3.5-Turbo</option>
                 <option value="grok-2-latest" ${currentModel === "grok-2-latest" ? "selected" : ""}>Grok-2-Latest</option>
+                <option value="deepseek-chat" ${currentModel === "deepseek-chat" ? "selected" : ""}>Deepseek-Chat</option>
             </select>
         </div>
         <div class="loading" id="loading">
