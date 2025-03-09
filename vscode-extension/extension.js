@@ -6,7 +6,7 @@ const { getAIResponse, checkModelByTokenCount } = require("./aiService");
 // TODO: Для JavaScript const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
 const { extractJavadocsFromProcessed, insertJavadocsUsingAST } = require("./javadocInserter");
 const { extractDocstringsFromProcessed, insertDocstringsUsingAST } = require("./pythondocInserter");
-const { documentationPrompts, refactoringPrompts, explanationPrompts } = require("./prompts");
+const { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts } = require("./prompts");
 const { getWebviewContent } = require("./webviewTemplate");
 
 
@@ -59,7 +59,8 @@ function activate(context) {
     const commands = [
         { command: "new-extension.generateCodeDocumentation", handler: handleCodeDocumentation },
         { command: "new-extension.refactorCode", handler: handleCodeRefactoring },
-        { command: "new-extension.generateExplanation", handler: handleCodeExplanation}
+        { command: "new-extension.generateExplanation", handler: handleCodeExplanation},
+        { command: "new-extension.generateCodeFromSignature", handler: handleCodeGeneration }
     ];
 
     commands.forEach(({ command, handler }) => {
@@ -84,6 +85,12 @@ async function handleCodeExplanation() {
     const editor = vscode.window.activeTextEditor;
     const languageId = editor?.document.languageId || "default";
     await processSelectedCode(getPrompt(explanationPrompts, languageId), "Code Explanation");
+}
+
+async function handleCodeGeneration() {
+    const editor = vscode.window.activeTextEditor;
+    const languageId = editor?.document.languageId || "default";
+    await processSelectedCode(getPrompt(generationPrompts, languageId), "Generated Code");
 }
 
 async function processSelectedCode(prompt, panelTitle, isDocumentation = false, languageId) {

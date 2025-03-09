@@ -26,6 +26,10 @@
       {
         "command": "new-extension.generateExplanation",
         "title": "Generate explanation"
+      },
+      {
+        "command": "new-extension.generateCodeFromSignature",
+        "title": "Generate code from signature"
       }
     ],
     "menus": {
@@ -42,6 +46,11 @@
         },
         {
           "command": "new-extension.generateExplanation",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        },
+        {
+          "command": "new-extension.generateCodeFromSignature",
           "when": "editorHasSelection",
           "group": "navigation"
         }

@@ -20,4 +20,11 @@ const explanationPrompts = {
     default: "Add detailed comments above each line of the following code, explaining what each line does and its role in the overall logic. Return only the annotated code without any additional text or Markdown wrappers."
 };
 
-module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts };
+const generationPrompts = {
+    javascript: "You will receive a JavaScript function signature. Your task is to generate and come up with a **complete** JavaScript function implementation. Ensure the signature remains unchanged and provide a meaningful implementation using ES6+ features and best practices. Return only the function code without any additional text or Markdown wrappers.",
+    python: "You will receive a Python function signature. Your task is to generate and come up with a **complete** Python function implementation. Keep the exact signature unchanged and provide a meaningful implementation following PEP 8 style guidelines. Return only the function code without any additional text or Markdown wrappers.",
+    java: "You will receive a Java method signature. Your task is to generate and come up with a **complete** Java method implementation",
+    default: "You will receive a function or method signature. Your task is to generate and come up with a **complete** implementation in the corresponding language, ensuring the signature remains unchanged and providing a meaningful body. Return only the generated code without any additional text or Markdown wrappers."
+};
+
+module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts };
