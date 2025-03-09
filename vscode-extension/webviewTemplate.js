@@ -98,7 +98,7 @@ function getWebviewContent(code, currentModel) {
        <div class="model-selector">
             <label for="model">Choose Model: </label>
             <select id="model" onchange="changeModel()">
-                <option value="gpt-3.5-turbo" ${currentModel === "gpt-3.5-turbo" ? "selected" : ""}>GPT-3.5-Turbo</option>
+                <option value="gpt-3.5-turbo" ${(currentModel === "gpt-3.5-turbo" || currentModel === "gpt-3.5-turbo-16k") ? "selected" : ""}>GPT-3.5-Turbo</option>
                 <option value="grok-2-latest" ${currentModel === "grok-2-latest" ? "selected" : ""}>Grok-2-Latest</option>
             </select>
         </div>
@@ -108,15 +108,25 @@ function getWebviewContent(code, currentModel) {
         <pre id="code">${code}</pre>
         <div class="buttons">
             <button class="button" id="cancelButton">Cancel</button>
+            <button class="button" id="regenerateButton">Regenerate</button>
             <button class="button" id="approveButton">Approve</button>
         </div>
         <script>
             const vscode = acquireVsCodeApi();
             const cancelButton = document.getElementById('cancelButton');
+            const regenerateButton = document.getElementById('regenerateButton');
             const approveButton = document.getElementById('approveButton');
 
             document.getElementById('cancelButton').addEventListener('click', () => {
                 vscode.postMessage({ command: 'cancel' });
+            });
+
+            document.getElementById('regenerateButton').addEventListener('click', () => {
+                document.body.style.overflow = 'hidden';
+                document.getElementById('loading').style.display = 'flex';
+                cancelButton.disabled = true;
+                approveButton.disabled = true;
+                vscode.postMessage({ command: 'regenerate' });
             });
 
             document.getElementById('approveButton').addEventListener('click', () => {

@@ -1,5 +1,6 @@
 const vscode = require("vscode");
-const { getAIResponse } = require("./aiService");
+const { getAIResponse, checkModelByTokenCount } = require("./aiService");
+
 
 // Залежності для парсингу AST
 // TODO: Для JavaScript const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
@@ -100,6 +101,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
 
 	console.log("-------AAAAAAAAAAAAAAAA----");
     const selectedText = editor.document.getText(selection);
+    currentModel = checkModelByTokenCount(selectedText, currentModel, vscode);
     const processedCode = await getAIResponse(selectedText, prompt, currentModel);
 
     let finalCode = processedCode;
@@ -140,10 +142,18 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
 
                 // Показываем индикатор загрузки через JS
                 panel.webview.postMessage({ command: "showLoading" });
-                            
+                currentModel = checkModelByTokenCount(selectedText, currentModel, vscode);
                 const newProcessedCode = await getAIResponse(selectedText, prompt, currentModel);
                 const finalCode = isDocumentation ? extractDocumentation(selectedText, newProcessedCode, languageId) : newProcessedCode;
                 panel.webview.postMessage({ command: "updateCode", code: finalCode, model: currentModel });
+                break;
+
+            case "regenerate":
+                panel.webview.postMessage({ command: "showLoading" });
+                currentModel = checkModelByTokenCount(selectedText, currentModel, vscode);
+                const regeneratedCode = await getAIResponse(selectedText, prompt, currentModel);
+                const updatedCode = isDocumentation ? extractDocumentation(selectedText, regeneratedCode, languageId) : regeneratedCode;
+                panel.webview.postMessage({ command: "updateCode", code: updatedCode, model: currentModel });
                 break;
         }
     });

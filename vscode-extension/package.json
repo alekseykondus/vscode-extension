@@ -68,6 +68,7 @@
     "axios": "^1.8.2",
     "dotenv": "^16.4.7",
     "openai": "^4.85.4",
+    "tiktoken": "^1.0.20",
     "tree-sitter": "^0.22.4",
     "tree-sitter-java": "^0.23.5",
     "tree-sitter-python": "^0.23.6"

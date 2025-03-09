@@ -1,15 +1,16 @@
 const OpenAI = require("openai");
 const axios = require("axios");
+const { encoding_for_model } = require("tiktoken");
 require("dotenv").config({ path: __dirname + "/.env" });
 
 const openai = new OpenAI({
     apiKey: process.env.OPENAI_API_KEY, 
 });
 
-async function getChatGPTResponse(code, prompt) {
+async function getChatGPTResponse(code, prompt, currentModel) {
     try {
         const response = await openai.chat.completions.create({
-            model: "gpt-3.5-turbo",
+            model: currentModel,
             messages: [{ role: "user", content: `${prompt}\n\n${code}` }],
             temperature: 0.7,
         });
@@ -59,10 +60,40 @@ async function getGrokResponse(code, prompt) {
     }
 }
 
+function checkModelByTokenCount(code, currentModel, vscode) {
+    const enc = encoding_for_model("gpt-3.5-turbo");
+    const tokenCount = enc.encode(code).length;
+    enc.free();
+    const GPT_3_5_TURBO_LIMIT = 4000;
+    const GPT_3_5_TURBO_16K_LIMIT = 16000;
+    const GROK_LIMIT = 64000;
+    console.log("tokenCount", tokenCount);
+    console.log("currentModel", currentModel);
+    if (tokenCount <= GPT_3_5_TURBO_LIMIT) {
+        return currentModel;
+    }
+
+    if (tokenCount <= GPT_3_5_TURBO_16K_LIMIT && currentModel === "gpt-3.5-turbo") {
+        vscode.window.showInformationMessage("The model was changed to gpt-3.5-turbo-16k due to the large length of the selected code.");
+        return "gpt-3.5-turbo-16k";
+    }
+
+    if (tokenCount <= GROK_LIMIT) {
+        if (currentModel != "grok-2-latest") {
+            vscode.window.showInformationMessage("The code exceeds GPT limits. Switching to grok-2-latest for processing.");
+        }
+        console.log("return grok-2-latest");
+        return "grok-2-latest";
+    }
+
+    vscode.window.showErrorMessage(`The selected code is too large (${tokenCount} tokens). Maximum supported: ${GROK_LIMIT} tokens.`);
+    return currentModel;
+}
+
 async function getAIResponse(code, prompt, currentModel) {
     console.log("Model that will be used:", currentModel);
-    if (currentModel === "gpt-3.5-turbo") {
-        return await getChatGPTResponse(code, prompt);
+    if (currentModel === "gpt-3.5-turbo" || currentModel === "gpt-3.5-turbo-16k") {
+        return await getChatGPTResponse(code, prompt, currentModel);
     } else if (currentModel === "grok-2-latest") {
         return await getGrokResponse(code, prompt);
     } else {
@@ -71,4 +102,5 @@ async function getAIResponse(code, prompt, currentModel) {
     }
 }
 
-module.exports = { getAIResponse };
+
+module.exports = { getAIResponse, checkModelByTokenCount };
