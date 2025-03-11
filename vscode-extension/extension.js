@@ -133,7 +133,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
         }
     );
 
-    panel.webview.html = getWebviewContent(finalCode, currentModel);
+    panel.webview.html = getWebviewContent(finalCode, currentModel, panelTitle === "Generated Tests");
 
     panel.webview.onDidReceiveMessage(async (message) => {
         switch (message.command) {
@@ -168,6 +168,12 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
                 const regeneratedCode = await getAIResponse(selectedText, prompt, currentModel);
                 const updatedCode = isDocumentation ? extractDocumentation(selectedText, regeneratedCode, languageId) : regeneratedCode;
                 panel.webview.postMessage({ command: "updateCode", code: updatedCode, model: currentModel });
+                break;
+
+            case "copy":
+                vscode.env.clipboard.writeText(message.code).then(() => {
+                    vscode.window.showInformationMessage("Tests copied to clipboard!");
+                });
                 break;
         }
     });

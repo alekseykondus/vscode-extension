@@ -1,4 +1,4 @@
-function getWebviewContent(code, currentModel) {
+function getWebviewContent(code, currentModel, isTesting = false) {
     return `<!DOCTYPE html>
     <html lang="ru">
     <head>
@@ -92,6 +92,9 @@ function getWebviewContent(code, currentModel) {
                 outline: none;
                 border: 1px solid #007acc;
             }
+            .hidden {
+                display: none !important;
+            }
         </style>
     </head>
     <body>
@@ -110,14 +113,14 @@ function getWebviewContent(code, currentModel) {
         <div class="buttons">
             <button class="button" id="cancelButton">Cancel</button>
             <button class="button" id="regenerateButton">Regenerate</button>
-            <button class="button" id="approveButton">Approve</button>
+            <button class="button ${isTesting ? '' : 'hidden'}" id="copyButton">Copy</button>
+            <button class="button ${isTesting ? 'hidden' : ''}" id="approveButton">Approve</button>
         </div>
         <script>
             const vscode = acquireVsCodeApi();
             const cancelButton = document.getElementById('cancelButton');
             const regenerateButton = document.getElementById('regenerateButton');
-            const approveButton = document.getElementById('approveButton');
-
+            
             document.getElementById('cancelButton').addEventListener('click', () => {
                 vscode.postMessage({ command: 'cancel' });
             });
@@ -126,13 +129,18 @@ function getWebviewContent(code, currentModel) {
                 document.body.style.overflow = 'hidden';
                 document.getElementById('loading').style.display = 'flex';
                 cancelButton.disabled = true;
-                approveButton.disabled = true;
+                document.getElementById('approveButton').disabled = true;
                 vscode.postMessage({ command: 'regenerate' });
             });
 
             document.getElementById('approveButton').addEventListener('click', () => {
                 const updatedCode = document.getElementById('code').textContent;
                 vscode.postMessage({ command: 'approve', updatedCode: updatedCode });
+            });
+
+            document.getElementById('copyButton').addEventListener('click', () => {
+                const codeToCopy = document.getElementById('code').textContent;
+                vscode.postMessage({ command: 'copy', code: codeToCopy });
             });
 
             function changeModel() {
