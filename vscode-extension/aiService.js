@@ -162,5 +162,4 @@ async function getAIResponse(code, prompt, currentModel) {
     }
 }
 
-
 module.exports = { getAIResponse, checkModelByTokenCount };

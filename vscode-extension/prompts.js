@@ -27,4 +27,11 @@ const generationPrompts = {
     default: "You will receive a function or method signature. Your task is to generate and come up with a **complete** implementation in the corresponding language, ensuring the signature remains unchanged and providing a meaningful body. Return only the generated code without any additional text or Markdown wrappers."
 };
 
-module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts };
+const testingPrompts = {
+    javascript: "Generate unit tests for the following JavaScript code using a testing framework like Jest or Mocha. Include test cases for all major functionalities, edge cases, and error handling. Return only the test code without any additional text or Markdown wrappers.",
+    python: "Generate unit tests for the following Python code using the `unittest` or `pytest` framework. Include test cases for all major functionalities, edge cases, and error handling. Return only the test code without any additional text or Markdown wrappers.",
+    java: "Generate unit tests for the following Java code using JUnit. Include test cases for all major functionalities, edge cases, and error handling. Return only the test code without any additional text or Markdown wrappers.",
+    default: "Generate unit tests for the following code using the appropriate testing framework for its programming language. Include test cases for all major functionalities, edge cases, and error handling. Return only the test code without any additional text or Markdown wrappers."
+};
+
+module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts };

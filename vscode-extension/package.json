@@ -30,6 +30,10 @@
       {
         "command": "new-extension.generateCodeFromSignature",
         "title": "Generate code from signature"
+      },
+      {
+        "command": "new-extension.generateTests",
+        "title": "Generate tests"
       }
     ],
     "menus": {
@@ -51,6 +55,11 @@
         },
         {
           "command": "new-extension.generateCodeFromSignature",
+          "when": "editorHasSelection",
+          "group": "navigation"
+        },
+        {
+          "command": "new-extension.generateTests",
           "when": "editorHasSelection",
           "group": "navigation"
         }
