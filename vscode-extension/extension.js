@@ -41,7 +41,8 @@ function extractDocumentation(originalCode, processedCode, languageId) {
             console.log("Updated Code:\n", updatedCode);
         }
         else {
-            console.log(`No processing implemented for language: ${languageId}. Returning original code.`);
+            updatedCode = processedCode;
+            console.log(`No processing implemented for language: ${languageId}. Returning processed code.`);
         }
     } catch (error) {
         console.error(`Error processing ${languageId} code:`, error.message);
