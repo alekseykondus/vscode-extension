@@ -7,7 +7,7 @@ let logFilePath;
 let isDebugMode = process.env.VSCODE_DEBUG_MODE === 'true' || vscode.workspace.getConfiguration('aiCodeAssistant').get('debugMode');
 
 function setupLogger(context) {
-    const globalStoragePath = context.globalStorageUri.fsPath;
+    const globalStoragePath = context.extensionUri.fsPath;
     logFilePath = path.join(globalStoragePath, 'ai-assistant.log');
     
     if (!fs.existsSync(globalStoragePath)) {

@@ -1,13 +1,14 @@
 {
-  "name": "new-extension",
+  "name": "ai-code-assistant",
   "publisher": "publisher-name",
-  "displayName": "new-extension",
-  "description": "new-extension",
+  "displayName": "AI Code Assistant",
+  "description": "AI-powered code assistance with documentation generation, refactoring and explanation",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.96.0"
   },
   "categories": [
+    "Programming Languages",
     "Other"
   ],
   "activationEvents": [
@@ -32,50 +33,50 @@
     },
     "commands": [
       {
-        "command": "new-extension.generateCodeDocumentation",
+        "command": "ai-code-assistant.generateCodeDocumentation",
         "title": "Generate code documentation"
       },
       {
-        "command": "new-extension.refactorCode",
+        "command": "ai-code-assistant.refactorCode",
         "title": "Refactor Code"
       },
       {
-        "command": "new-extension.generateExplanation",
+        "command": "ai-code-assistant.generateExplanation",
         "title": "Generate explanation"
       },
       {
-        "command": "new-extension.generateCodeFromSignature",
+        "command": "ai-code-assistant.generateCodeFromSignature",
         "title": "Generate code from signature"
       },
       {
-        "command": "new-extension.generateTests",
+        "command": "ai-code-assistant.generateTests",
         "title": "Generate tests"
       }
     ],
     "menus": {
       "editor/context": [
         {
-          "command": "new-extension.generateCodeDocumentation",
+          "command": "ai-code-assistant.generateCodeDocumentation",
           "when": "editorHasSelection",
           "group": "navigation"
         },
         {
-          "command": "new-extension.refactorCode",
+          "command": "ai-code-assistant.refactorCode",
           "when": "editorHasSelection",
           "group": "navigation"
         },
         {
-          "command": "new-extension.generateExplanation",
+          "command": "ai-code-assistant.generateExplanation",
           "when": "editorHasSelection",
           "group": "navigation"
         },
         {
-          "command": "new-extension.generateCodeFromSignature",
+          "command": "ai-code-assistant.generateCodeFromSignature",
           "when": "editorHasSelection",
           "group": "navigation"
         },
         {
-          "command": "new-extension.generateTests",
+          "command": "ai-code-assistant.generateTests",
           "when": "editorHasSelection",
           "group": "navigation"
         }

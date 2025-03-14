@@ -60,11 +60,11 @@ function activate(context) {
     logInfo("Extension activated");
 
     const commands = [
-        { command: "new-extension.generateCodeDocumentation", handler: handleCodeDocumentation },
-        { command: "new-extension.refactorCode", handler: handleCodeRefactoring },
-        { command: "new-extension.generateExplanation", handler: handleCodeExplanation},
-        { command: "new-extension.generateCodeFromSignature", handler: handleCodeGeneration },
-        { command: "new-extension.generateTests", handler: handleGenerateTests }
+        { command: "ai-code-assistant.generateCodeDocumentation", handler: handleCodeDocumentation },
+        { command: "ai-code-assistant.refactorCode", handler: handleCodeRefactoring },
+        { command: "ai-code-assistant.generateExplanation", handler: handleCodeExplanation},
+        { command: "ai-code-assistant.generateCodeFromSignature", handler: handleCodeGeneration },
+        { command: "ai-code-assistant.generateTests", handler: handleGenerateTests }
     ];
 
     commands.forEach(({ command, handler }) => {
