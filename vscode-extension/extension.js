@@ -1,7 +1,7 @@
 const vscode = require("vscode");
 const { getAIResponse, checkModelByTokenCount } = require("./aiService");
 const { setupLogger, logInfo, logError, logDebug } = require('./logger');
-
+const OperationType = require('./operationTypes');
 
 // Залежності для парсингу AST
 // TODO: Для JavaScript const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
@@ -9,6 +9,8 @@ const { extractJavadocsFromProcessed, insertJavadocsUsingAST } = require("./java
 const { extractDocstringsFromProcessed, insertDocstringsUsingAST } = require("./pythondocInserter");
 const { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts } = require("./prompts");
 const { getWebviewContent } = require("./webviewTemplate");
+
+const { generateTestFileName, getExistingTestFiles, determineTestFilePath, saveTestsToFile } = require('./testGenerationService');
 
 let currentModel = vscode.workspace.getConfiguration('aiCodeAssistant').get('defaultModel');
 function getPrompt(prompts, languageId) {
@@ -85,7 +87,7 @@ async function handleCodeDocumentation() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting documentation generation for ${languageId}`);
-        await processSelectedCode(getPrompt(documentationPrompts, languageId), "Code Documentation", true, languageId);
+        await processSelectedCode(getPrompt(documentationPrompts, languageId), "Code Documentation", OperationType.DOCUMENTATION, languageId);
         logInfo(`Documentation generation completed for ${languageId}`);
     } catch (error) {
         logError(`Documentation generation failed: ${error.message}`);
@@ -99,7 +101,7 @@ async function handleCodeRefactoring() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting code refactoring for ${languageId}`);
-        await processSelectedCode(getPrompt(refactoringPrompts, languageId), "Refactored Code");
+        await processSelectedCode(getPrompt(refactoringPrompts, languageId), "Refactored Code", OperationType.REFACTORING, languageId);
         logInfo(`Code refactoring completed for ${languageId}`);
     } catch (error) {
         logError(`Refactoring failed: ${error.message}`);
@@ -113,7 +115,7 @@ async function handleCodeExplanation() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting code explanation for ${languageId}`);
-        await processSelectedCode(getPrompt(explanationPrompts, languageId), "Code Explanation");
+        await processSelectedCode(getPrompt(explanationPrompts, languageId), "Code Explanation", OperationType.EXPLANATION, languageId);
         logInfo(`Code explanation completed for ${languageId}`);
     } catch (error) {
         logError(`Explanation failed: ${error.message}`);
@@ -127,7 +129,7 @@ async function handleCodeGeneration() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting code generation for ${languageId}`);
-        await processSelectedCode(getPrompt(generationPrompts, languageId), "Generated Code");
+        await processSelectedCode(getPrompt(generationPrompts, languageId), "Generated Code", OperationType.GENERATION, languageId);
         logInfo(`Code generation completed for ${languageId}`);
     } catch (error) {
         logError(`Generation failed: ${error.message}`);
@@ -141,7 +143,16 @@ async function handleGenerateTests() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting test generation for ${languageId}`);
-        await processSelectedCode(getPrompt(testingPrompts, languageId), "Generated Tests", false, languageId);
+        
+
+        logInfo(`Test generation completed for ${languageId}`);
+        const suggestedName = generateTestFileName(editor.document.fileName, languageId);
+        logInfo(`suggestedName ${suggestedName}`);
+        const testFiles = await getExistingTestFiles(languageId);
+        logInfo(`testFiles ${testFiles}`);
+
+        await processSelectedCode(getPrompt(testingPrompts, languageId), "Generated Tests", OperationType.TESTING, languageId, {suggestedName, testFiles});
+
         logInfo(`Test generation completed for ${languageId}`);
     } catch (error) {
         logError(`Test generation failed: ${error.message}`);
@@ -150,9 +161,9 @@ async function handleGenerateTests() {
     }
 }
 
-async function processSelectedCode(prompt, panelTitle, isDocumentation = false, languageId) {
+async function processSelectedCode(prompt, panelTitle, operationType, languageId, extraData = {}) {
     logDebug(`Starting processSelectedCode for ${panelTitle}`);
-    logDebug(`Parameters: isDocumentation=${isDocumentation}, language=${languageId}`);
+    logDebug(`Parameters: operationType=${operationType}, language=${languageId}`);
 
     const editor = vscode.window.activeTextEditor;
     if (!editor) {
@@ -180,7 +191,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
     logDebug(`AI response received (${processedCode.length} characters)`);
 
     let finalCode = processedCode;
-    if (isDocumentation) {
+    if (operationType === OperationType.DOCUMENTATION) {
         logDebug(`Starting documentation processing for ${languageId}`);
         finalCode = extractDocumentation(selectedText, processedCode, languageId);
         logDebug(`Documentation processing completed. Result length: ${finalCode.length} characters`);
@@ -197,7 +208,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
         }
     );
 
-    panel.webview.html = getWebviewContent(finalCode, currentModel, panelTitle === "Generated Tests");
+    panel.webview.html = getWebviewContent(finalCode, currentModel, operationType, operationType === OperationType.TESTING ? extraData : null);
     logDebug("Webview content initialized");
 
     panel.webview.onDidReceiveMessage(async (message) => {
@@ -221,7 +232,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
             case "changeModel":
                 logInfo(`User changed model to: ${message.model}`);
                 currentModel = message.model || currentModel;
-                console.log("Model changed to: ", message.model);
+                logInfo("Model changed to: ", message.model);
 
                 // Показываем индикатор загрузки через JS
                 panel.webview.postMessage({ command: "showLoading" });
@@ -229,7 +240,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
                 logDebug("Regenerating code with new model...");
 
                 const newProcessedCode = await getAIResponse(selectedText, prompt, currentModel);
-                const finalCode = isDocumentation ? extractDocumentation(selectedText, newProcessedCode, languageId) : newProcessedCode;
+                const finalCode = (operationType === OperationType.DOCUMENTATION) ? extractDocumentation(selectedText, newProcessedCode, languageId) : newProcessedCode;
                 panel.webview.postMessage({ command: "updateCode", code: finalCode, model: currentModel });
                 logInfo(`Code regenerated with model: ${currentModel}`);
                 break;
@@ -241,7 +252,7 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
 
                 logDebug("Regenerating code...");
                 const regeneratedCode = await getAIResponse(selectedText, prompt, currentModel);
-                const updatedCode = isDocumentation ? extractDocumentation(selectedText, regeneratedCode, languageId) : regeneratedCode;
+                const updatedCode = (operationType === OperationType.DOCUMENTATION) ? extractDocumentation(selectedText, regeneratedCode, languageId) : regeneratedCode;
                 panel.webview.postMessage({ command: "updateCode", code: updatedCode, model: currentModel });
                 logInfo("Code regeneration completed");
                 break;
@@ -251,6 +262,13 @@ async function processSelectedCode(prompt, panelTitle, isDocumentation = false, 
                 vscode.env.clipboard.writeText(message.code).then(() => {
                     vscode.window.showInformationMessage("Tests copied to clipboard!");
                 });
+                break;
+
+            case "moveToFile":
+                logInfo(`Moving tests to file: ${message.fileName}`);
+                const fullPath = await determineTestFilePath(message.fileName, languageId);
+                await saveTestsToFile(fullPath, message.code, languageId);
+                panel.dispose();
                 break;
             
             default:
