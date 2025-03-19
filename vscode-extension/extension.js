@@ -7,6 +7,7 @@ const OperationType = require('./operationTypes');
 // TODO: Для JavaScript const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
 const { extractJavadocsFromProcessed, insertJavadocsUsingAST } = require("./javadocInserter");
 const { extractDocstringsFromProcessed, insertDocstringsUsingAST } = require("./pythondocInserter");
+const { extractJSDocsFromProcessed, insertJSDocsUsingAST } = require('./jsdocInserter');
 const { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts } = require("./prompts");
 const { getWebviewContent } = require("./webviewTemplate");
 
@@ -38,6 +39,12 @@ function extractDocumentation(originalCode, processedCode, languageId) {
             const docstrings = extractDocstringsFromProcessed(processedCode);
             logDebug(`Extracted ${docstrings.length} docstrings`);
             updatedCode = insertDocstringsUsingAST(originalCode, docstrings);
+        }
+        else if (languageId === "javascript" || languageId === "typescript") {
+            logDebug(`Building AST for ${languageId} code`);
+            const jsdocs = extractJSDocsFromProcessed(processedCode);
+            logDebug(`Extracted ${Object.keys(jsdocs).length} JSDoc comments`);
+            updatedCode = insertJSDocsUsingAST(originalCode, jsdocs);
         }
         else {
             updatedCode = processedCode;
