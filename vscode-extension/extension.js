@@ -2,18 +2,18 @@ const vscode = require("vscode");
 const { getAIResponse, checkModelByTokenCount } = require("./aiService");
 const { setupLogger, logInfo, logError, logDebug } = require('./logger');
 const OperationType = require('./operationTypes');
+const { registerSolidQuickFixes, registerDocumentListeners } = require('./solidAnalyzer');
 
-// Залежності для парсингу AST
-// TODO: Для JavaScript const { parse: parseJS } = require("@babel/parser"); // Для JavaScript
 const { extractJavadocsFromProcessed, insertJavadocsUsingAST } = require("./javadocInserter");
 const { extractDocstringsFromProcessed, insertDocstringsUsingAST } = require("./pythondocInserter");
 const { extractJSDocsFromProcessed, insertJSDocsUsingAST } = require('./jsdocInserter');
 const { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts } = require("./prompts");
-const { getWebviewContent } = require("./webviewTemplate");
+const { getWebviewContent } = require("./webviews/webviewTemplate");
 
 const { generateTestFileName, getExistingTestFiles, determineTestFilePath, saveTestsToFile } = require('./testGenerationService');
 
 let currentModel = vscode.workspace.getConfiguration('aiCodeAssistant').get('defaultModel');
+
 function getPrompt(prompts, languageId) {
     return prompts[languageId] || prompts.default;
 }
@@ -65,6 +65,9 @@ function extractDocumentation(originalCode, processedCode, languageId) {
  */
 function activate(context) {
     setupLogger(context);
+
+    let config_ = vscode.workspace.getConfiguration('aiCodeAssistant');
+    logDebug(`Config object: ${JSON.stringify(config_)}`);
     
     logInfo("Extension activated");
 
@@ -87,6 +90,13 @@ function activate(context) {
         });
         context.subscriptions.push(disposable);
     });
+
+    const config = vscode.workspace.getConfiguration('aiCodeAssistant');
+    if (config.get('enableAutoSolidAnalysis', true)) {
+        registerSolidQuickFixes(context);
+        registerDocumentListeners(context);
+        vscode.window.setStatusBarMessage('SOLID аналіз активовано', 5000);
+    }
 }
 
 async function handleCodeDocumentation() {
@@ -94,7 +104,12 @@ async function handleCodeDocumentation() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting documentation generation for ${languageId}`);
-        await processSelectedCode(getPrompt(documentationPrompts, languageId), "Code Documentation", OperationType.DOCUMENTATION, languageId);
+        await vscode.window.withProgress({location: vscode.ProgressLocation.Notification,
+                                          title: "Generating code documentation...",
+                                          cancellable: false
+                                    }, async (progress) => {
+            await processSelectedCode(getPrompt(documentationPrompts, languageId), "Code Documentation", OperationType.DOCUMENTATION, languageId);
+        });
         logInfo(`Documentation generation completed for ${languageId}`);
     } catch (error) {
         logError(`Documentation generation failed: ${error.message}`);
@@ -108,7 +123,12 @@ async function handleCodeRefactoring() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting code refactoring for ${languageId}`);
-        await processSelectedCode(getPrompt(refactoringPrompts, languageId), "Refactored Code", OperationType.REFACTORING, languageId);
+        await vscode.window.withProgress({location: vscode.ProgressLocation.Notification,
+                                          title: "Refactoring code...",
+                                          cancellable: false
+                                    }, async (progress) => {
+            await processSelectedCode(getPrompt(refactoringPrompts, languageId), "Refactored Code", OperationType.REFACTORING, languageId);
+        });
         logInfo(`Code refactoring completed for ${languageId}`);
     } catch (error) {
         logError(`Refactoring failed: ${error.message}`);
@@ -122,7 +142,12 @@ async function handleCodeExplanation() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting code explanation for ${languageId}`);
-        await processSelectedCode(getPrompt(explanationPrompts, languageId), "Code Explanation", OperationType.EXPLANATION, languageId);
+        await vscode.window.withProgress({location: vscode.ProgressLocation.Notification,
+                                          title: "Generating code explanation...",
+                                          cancellable: false
+                                    }, async (progress) => {
+            await processSelectedCode(getPrompt(explanationPrompts, languageId), "Code Explanation", OperationType.EXPLANATION, languageId);
+        });
         logInfo(`Code explanation completed for ${languageId}`);
     } catch (error) {
         logError(`Explanation failed: ${error.message}`);
@@ -136,7 +161,12 @@ async function handleCodeGeneration() {
         const editor = vscode.window.activeTextEditor;
         const languageId = editor?.document.languageId || "default";
         logInfo(`Starting code generation for ${languageId}`);
-        await processSelectedCode(getPrompt(generationPrompts, languageId), "Generated Code", OperationType.GENERATION, languageId);
+        await vscode.window.withProgress({location: vscode.ProgressLocation.Notification,
+                                          title: "Generating code...",
+                                          cancellable: false
+                                    }, async (progress) => {
+            await processSelectedCode(getPrompt(generationPrompts, languageId), "Generated Code", OperationType.GENERATION, languageId);
+        });
         logInfo(`Code generation completed for ${languageId}`);
     } catch (error) {
         logError(`Generation failed: ${error.message}`);
@@ -157,9 +187,12 @@ async function handleGenerateTests() {
         logInfo(`suggestedName ${suggestedName}`);
         const testFiles = await getExistingTestFiles(languageId);
         logInfo(`testFiles ${testFiles}`);
-
-        await processSelectedCode(getPrompt(testingPrompts, languageId), "Generated Tests", OperationType.TESTING, languageId, {suggestedName, testFiles});
-
+        await vscode.window.withProgress({location: vscode.ProgressLocation.Notification,
+                                          title: "Generating tests...",
+                                          cancellable: false
+                                    }, async (progress) => {
+            await processSelectedCode(getPrompt(testingPrompts, languageId), "Generated Tests", OperationType.TESTING, languageId, {suggestedName, testFiles});
+        });
         logInfo(`Test generation completed for ${languageId}`);
     } catch (error) {
         logError(`Test generation failed: ${error.message}`);
@@ -241,7 +274,6 @@ async function processSelectedCode(prompt, panelTitle, operationType, languageId
                 currentModel = message.model || currentModel;
                 logInfo("Model changed to: ", message.model);
 
-                // Показываем индикатор загрузки через JS
                 panel.webview.postMessage({ command: "showLoading" });
                 currentModel = checkModelByTokenCount(selectedText, currentModel, vscode);
                 logDebug("Regenerating code with new model...");
@@ -284,7 +316,6 @@ async function processSelectedCode(prompt, panelTitle, operationType, languageId
         }
     });
 }
-
 
 function deactivate() {}
 

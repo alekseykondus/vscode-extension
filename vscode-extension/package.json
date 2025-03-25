@@ -26,8 +26,13 @@
         },
         "aiCodeAssistant.defaultModel": {
           "type": "string",
-          "default": "gpt-3.5-turbo",
+          "default": "grok-2-latest",
           "description": "Default AI model for code processing"
+        },
+        "aiCodeAssistant.enableAutoSolidAnalysis": {
+          "type": "boolean",
+          "default": true,
+          "description": "Automatically analyze code for compliance with SOLID principlesD"
         }
       }
     },
@@ -51,6 +56,14 @@
       {
         "command": "ai-code-assistant.generateTests",
         "title": "Generate tests"
+      },
+      {
+        "command": "ai-code-assistant.showSolidRecommendation",
+        "title": "AI Code Assistant: Show SOLID Recommendation"
+      },
+      {
+        "command": "ai-code-assistant.suggestSolidFix",
+        "title": "AI Code Assistant: Suggest SOLID Fix"
       }
     ],
     "menus": {

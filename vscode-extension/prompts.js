@@ -34,4 +34,46 @@ const testingPrompts = {
     default: "Generate unit tests for the following code using the appropriate testing framework for its programming language. Include test cases for all major functionalities, edge cases, and error handling. Return only the test code without any additional text or Markdown wrappers."
 };
 
-module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts };
+const resultFormat = "Return the analysis result in JSON format: [{\"name\": \"class/interface name that has the problem\", \"issue\": \"issue description\", \"solution\": \"short proposed solution\"}]";
+
+const SolidPrinciples = {
+    SRP: {
+        name: "Single Responsibility Principle",
+        description: "A class should have only one reason to change",
+        prompt: "Analyze the code for compliance with the Single Responsibility Principle (SRP). Identify classes that have more than one responsibility. " + resultFormat,
+    },
+    OCP: {
+        name: "Open-Closed Principle",
+        description: "Software entities should be open for extension, but closed for modification",
+        prompt: "Analyze the code for compliance with the Open-Closed Principle (OCP). Identify classes that require modification to add new behavior instead of extension. " + resultFormat,
+    },
+    LSP: {
+        name: "Liskov Substitution Principle",
+        description: "Objects in a program should be replaceable with instances of their subtypes without altering the correctness of the program",
+        prompt: "Analyze the code for compliance with the Liskov Substitution Principle (LSP). Identify subclasses that violate the contracts of base classes. " + resultFormat,
+    },
+    ISP: {
+        name: "Interface Segregation Principle",
+        description: "Many client-specific interfaces are better than one general-purpose interface",
+        prompt: "Analyze the code for compliance with the Interface Segregation Principle (ISP). Identify interfaces that are too large and force classes to implement methods they don't need. " + resultFormat,
+    },
+    DIP: {
+        name: "Dependency Inversion Principle",
+        description: "High-level modules should not depend on low-level modules. Both should depend on abstractions",
+        prompt: "Analyze the code for compliance with the Dependency Inversion Principle (DIP). Identify classes that depend on concrete implementations instead of abstractions. " + resultFormat
+    }
+};
+
+const getSolidRecommendationPrompt = (principleCode, issue, recommendation) => 
+    `Describe in detail how to correct the following violation of the principle ${principleCode}:
+    ${issue}
+    ${recommendation}
+
+    Give:
+    1. Explanation of why this is a problem from the perspective of the ${principleCode} principle
+    2. Detailed step-by-step instructions on how to fix this
+    3. What are the benefits of such a fix for code maintenance and extension
+    
+    You DO NOT need to generate the corrected code yourself. Only recommendations and instructions in words.`;
+
+module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts, SolidPrinciples, getSolidRecommendationPrompt };
