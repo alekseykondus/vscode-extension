@@ -37,6 +37,8 @@ function getWebviewContent(code, currentModel, operationType, testData = null) {
                 <option value="deepseek-chat" ${currentModel === "deepseek-chat" ? "selected" : ""}>Deepseek-Chat</option>
                 <option value="claude-3-7-sonnet-20250219" ${currentModel === "claude-3-7-sonnet-20250219" ? "selected" : ""}>Claude-3-7-sonnet</option>
                 <option value="claude-3-5-haiku-20241022" ${currentModel === "claude-3-5-haiku-20241022" ? "selected" : ""}>Claude-3-5-haiku</option>
+                <option value="gemini-1.5-pro-latest" ${currentModel === "gemini-1.5-pro-latest" ? "selected" : ""}>Gemini-1.5-Pro</option>
+                <option value="gemini-2.0-flash" ${currentModel === "gemini-2.0-flash" ? "selected" : ""}>Gemini-2.0-Flash</option>
             </select>
         </div>
         <div class="test-file-section">

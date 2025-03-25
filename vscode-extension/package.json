@@ -26,7 +26,7 @@
         },
         "aiCodeAssistant.defaultModel": {
           "type": "string",
-          "default": "grok-2-latest",
+          "default": "gemini-1.5-pro-latest",
           "description": "Default AI model for code processing"
         },
         "aiCodeAssistant.enableAutoSolidAnalysis": {
@@ -114,6 +114,7 @@
   "dependencies": {
     "@anthropic-ai/sdk": "^0.39.0",
     "@babel/parser": "^7.23.0",
+    "@google/generative-ai": "^0.24.0",
     "axios": "^1.8.2",
     "dotenv": "^16.4.7",
     "openai": "^4.85.4",

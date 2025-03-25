@@ -3,6 +3,7 @@ const axios = require("axios");
 const { encoding_for_model } = require("tiktoken");
 require("dotenv").config({ path: __dirname + "/.env" });
 const Anthropic = require('@anthropic-ai/sdk');
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 
 const { logInfo, logError, logDebug } = require('./logger');
 
@@ -23,6 +24,8 @@ const grok = new OpenAI({
 const anthropic = new Anthropic({
     apiKey: process.env.CLOUDE_API_KEY,
 });
+
+const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
 function cleanCodeFromMarkdown(response) {
     logDebug("Cleaning markdown from response");
@@ -157,6 +160,22 @@ async function getClaudeResponse(code, prompt, model = "claude-3-7-sonnet-202502
     }
 }
 
+async function getGeminiResponse(code, prompt, modelName = "gemini-1.5-pro-latest") {
+    logDebug("Starting Gemini API request");
+    try {
+        const model = gemini.getGenerativeModel({ model: modelName });
+        const result = await model.generateContent(`${prompt}\n\n${code}`);
+        const response = await result.response;
+        const text = response.text();
+        logDebug(`Raw Gemini response: ${text.substring(0, 100)}...`);
+        return cleanCodeFromMarkdown(text);
+    } catch (error) {
+        logError(`Gemini request failed: ${error.message}`);
+        if (error.response) logDebug("Error response:", error.response.data);
+        return "Error retrieving response from Gemini.";
+    }
+}
+
 function checkModelByTokenCount(code, currentModel, vscode) {
     logDebug("Checking model by token count");
     try {
@@ -169,6 +188,7 @@ function checkModelByTokenCount(code, currentModel, vscode) {
         const GPT_3_5_TURBO_LIMIT = 4000;
         const GPT_3_5_TURBO_16K_LIMIT = 16000;
         const DEEPSEEK_LIMIT = 8000;
+        const GEMINI_LIMIT = 8000;
         const CLAUDE_LIMIT = 20000;
         const GROK_LIMIT = 64000;
 
@@ -191,6 +211,14 @@ function checkModelByTokenCount(code, currentModel, vscode) {
                 vscode.window.showInformationMessage("The code exceeds limits. Switching to deepseek-chat for processing.");
             }
             return "deepseek-chat";
+        }
+
+        if (tokenCount <= GEMINI_LIMIT) {
+            if (currentModel != "gemini-1.5-pro-latest" && currentModel != "gemini-2.0-flash") {
+                logInfo(`Switching to Gemini (${tokenCount} > ${DEEPSEEK_LIMIT})`);
+                vscode.window.showInformationMessage("The code exceeds limits. Switching to gemini-1.5-pro-latest for processing.");
+            }
+            return "gemini-1.5-pro-latest";
         }
 
         if (tokenCount <= CLAUDE_LIMIT) {
@@ -237,6 +265,10 @@ async function getAIResponse(code, prompt, currentModel) {
             case "claude-3-7-sonnet-20250219":
             case "claude-3-5-haiku-20241022":
                 response = await getClaudeResponse(code, prompt, currentModel);
+                break;
+            case "gemini-2.0-flash":
+            case "gemini-1.5-pro-latest":
+                response = await getGeminiResponse(code, prompt, currentModel);
                 break;
             default:
                 logError(`Unknown model requested: ${currentModel}`);
