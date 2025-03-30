@@ -76,4 +76,37 @@ const getSolidRecommendationPrompt = (principleCode, issue, recommendation) =>
     
     You DO NOT need to generate the corrected code yourself. Only recommendations and instructions in words.`;
 
-module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts, SolidPrinciples, getSolidRecommendationPrompt };
+const getSolidFixPrompt = (principle, issue, recommendation, codeToFix, fileLanguage) => 
+    `Task: Complete code refactoring based on the ${principle} principle, addressing the issue: ${issue},
+    taking into account previously suggested recommendations: ${recommendation}
+
+    Current code:
+    \`\`\`${fileLanguage}
+    ${codeToFix}
+    \`\`\`
+
+    Refactoring requirements:
+    1. Focus ONLY on the current class
+    2. DO NOT rewrite existing dependencies
+    3. Create necessary abstractions and interfaces
+    4. Minimize coupling
+    5. Maximize extensibility
+    6. Ensure clean architecture
+
+    Response format:
+    {
+        "refactoredClasses": [
+            {
+                "fileName": "file_name.${fileLanguage}",
+                "fullCode": "complete class code",
+                "purpose": "purpose of the class"
+            }
+        ],
+        "architectureDescription": "Description of the new architecture",
+        "migrationSteps": ["Migration steps"]
+    }
+    Make sure your json response is valid, if there are brackets inside brackets, they should be with \".
+    IMPORTANT: Return ONLY the JSON object with no additional text before or after it. Do not include any explanations, markdown formatting, or code blocks outside the JSON structure.
+    `;
+
+module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts, SolidPrinciples, getSolidRecommendationPrompt, getSolidFixPrompt };

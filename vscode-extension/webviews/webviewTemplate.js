@@ -29,18 +29,7 @@ function getWebviewContent(code, currentModel, operationType, testData = null) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
     </head>
     <body>
-       <div class="model-selector">
-            <label for="model">Choose Model: </label>
-            <select id="model" onchange="changeModel()">
-                <option value="gpt-3.5-turbo" ${(currentModel === "gpt-3.5-turbo" || currentModel === "gpt-3.5-turbo-16k") ? "selected" : ""}>GPT-3.5-Turbo</option>
-                <option value="grok-2-latest" ${currentModel === "grok-2-latest" ? "selected" : ""}>Grok-2-Latest</option>
-                <option value="deepseek-chat" ${currentModel === "deepseek-chat" ? "selected" : ""}>Deepseek-Chat</option>
-                <option value="claude-3-7-sonnet-20250219" ${currentModel === "claude-3-7-sonnet-20250219" ? "selected" : ""}>Claude-3-7-sonnet</option>
-                <option value="claude-3-5-haiku-20241022" ${currentModel === "claude-3-5-haiku-20241022" ? "selected" : ""}>Claude-3-5-haiku</option>
-                <option value="gemini-1.5-pro-latest" ${currentModel === "gemini-1.5-pro-latest" ? "selected" : ""}>Gemini-1.5-Pro</option>
-                <option value="gemini-2.0-flash" ${currentModel === "gemini-2.0-flash" ? "selected" : ""}>Gemini-2.0-Flash</option>
-            </select>
-        </div>
+        ${getModelSelectorHTML(currentModel)}
         <div class="test-file-section">
             <div class="file-input-group">
                 <input type="text" id="testFilePath" 
@@ -71,4 +60,20 @@ function getWebviewContent(code, currentModel, operationType, testData = null) {
     </html>`;
 }
 
-module.exports = { getWebviewContent };
+function getModelSelectorHTML(currentModel) {
+    return `
+    <div class="model-selector">
+        <label for="model">Choose Model: </label>
+        <select id="model" onchange="changeModel()">
+            <option value="gpt-3.5-turbo" ${(currentModel === "gpt-3.5-turbo" || currentModel === "gpt-3.5-turbo-16k") ? "selected" : ""}>GPT-3.5-Turbo</option>
+            <option value="grok-2-latest" ${currentModel === "grok-2-latest" ? "selected" : ""}>Grok-2-Latest</option>
+            <option value="deepseek-chat" ${currentModel === "deepseek-chat" ? "selected" : ""}>Deepseek-Chat</option>
+            <option value="claude-3-7-sonnet-20250219" ${currentModel === "claude-3-7-sonnet-20250219" ? "selected" : ""}>Claude-3-7-sonnet</option>
+            <option value="claude-3-5-haiku-20241022" ${currentModel === "claude-3-5-haiku-20241022" ? "selected" : ""}>Claude-3-5-haiku</option>
+            <option value="gemini-1.5-pro-latest" ${currentModel === "gemini-1.5-pro-latest" ? "selected" : ""}>Gemini-1.5-Pro</option>
+            <option value="gemini-2.0-flash" ${currentModel === "gemini-2.0-flash" ? "selected" : ""}>Gemini-2.0-Flash</option>
+        </select>
+    </div>`;
+}
+
+module.exports = { getWebviewContent, getModelSelectorHTML };

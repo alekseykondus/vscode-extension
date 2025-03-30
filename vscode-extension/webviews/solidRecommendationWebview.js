@@ -1,4 +1,5 @@
 const { formatTextAsHTML, escapeHtml } = require('./../textFormatterToHtml');
+const { getModelSelectorHTML } = require('./webviewTemplate');
 const fs = require('fs');
 const path = require('path');
 
@@ -9,7 +10,7 @@ const path = require('path');
  * @param {string} detailedRecommendation - Детальна рекомендація від AI
  * @returns {string} - HTML-контент
  */
-function getSolidRecommendationWebviewContent(principleCode, issue, detailedRecommendation) {
+function getSolidRecommendationWebviewContent(principleCode, issue, detailedRecommendation, currentModel) {
     const cssPath = path.resolve(__dirname, 'css/solidRecommendationStyles.css');
     const styles = fs.readFileSync(cssPath, 'utf-8');
     return `
@@ -22,6 +23,10 @@ function getSolidRecommendationWebviewContent(principleCode, issue, detailedReco
                 <style>${styles}</style>
             </head>
             <body>
+                ${getModelSelectorHTML(currentModel)}
+                <div class="loading" id="loading" style="display: none;">
+                    <div class="spinner"></div>
+                </div>
                 <div class="container">
                     <div class="header">
                         <h1>Detailed recommendation for ${principleCode}</h1>
@@ -31,6 +36,60 @@ function getSolidRecommendationWebviewContent(principleCode, issue, detailedReco
                         ${formatTextAsHTML(detailedRecommendation)}
                     </div>
                 </div>
+                <div class="buttons">
+                    <button class="button" id="cancelButton">Cancel</button>
+                    <button class="button" id="regenerateButton">Regenerate</button>
+                </div>
+                <script>
+                    const vscode = acquireVsCodeApi();
+                    const cancelButton = document.getElementById('cancelButton');
+                    const regenerateButton = document.getElementById('regenerateButton');
+
+                    document.getElementById('cancelButton').addEventListener('click', () => {
+                        vscode.postMessage({ command: 'cancel' });
+                    });
+
+                    document.getElementById('regenerateButton').addEventListener('click', () => {
+                        document.body.style.overflow = 'hidden';
+                        document.getElementById('loading').style.display = 'flex';
+                        cancelButton.disabled = true;
+                        regenerateButton.disabled = true;
+                        vscode.postMessage({ command: 'regenerate' });
+                    });
+
+                    function changeModel() {
+                        const model = document.getElementById('model').value;
+                        document.getElementById('loading').style.display = 'flex';
+                        document.body.style.overflow = 'hidden';
+                        cancelButton.disabled = true;
+                        regenerateButton.disabled = true;
+                        vscode.postMessage({ command: 'changeModel', model: model });
+                    }
+
+                    window.addEventListener('message', event => {
+                        const message = event.data;
+
+                        if (message.command === "showLoading") {
+                            document.body.style.overflow = 'hidden';
+                            document.getElementById('loading').style.display = 'flex';
+                            cancelButton.disabled = true;
+                            regenerateButton.disabled = true;
+                        } else if (message.command === "hideLoading") {
+                            document.body.style.overflow = 'auto';
+                            document.getElementById('loading').style.display = 'none';
+                            cancelButton.disabled = false;
+                            regenerateButton.disabled = false;
+                        }
+                    });
+
+                    document.addEventListener('DOMContentLoaded', (event) => {
+                        if (typeof hljs !== 'undefined') {
+                            document.querySelectorAll('pre code').forEach(el => {
+                                hljs.highlightElement(el);
+                            });
+                        }
+                    });
+                </script>
             </body>
             </html>
             `;

@@ -5,7 +5,79 @@ body {
     color: #e1e1e1;
     background-color: #1e1e1e;
 }
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #2d2d2d;
+}
+.button {
+    background-color: #007acc;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.button:hover {
+    background-color: #005f8f;
+}
+.loading {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgba(255, 255, 255, 0.3);
+    border-top: 5px solid white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.model-selector {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background-color: #2d2d2d;
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+}
 
+.model-selector label {
+    font-size: 14px;
+    font-weight: bold;
+    color: white;
+}
+
+.model-selector select {
+    background-color: #3a3a3a;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.model-selector select:focus {
+    outline: none;
+    border: 1px solid #007acc;
+}
+.hidden {
+    display: none !important;
+}
 h1 {
     font-size: 20px;
     margin-bottom: 15px;
@@ -64,7 +136,7 @@ strong {
 
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px 0px;
 }
 
 .header {

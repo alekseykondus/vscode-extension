@@ -287,4 +287,4 @@ async function getAIResponse(code, prompt, currentModel) {
     }
 }
 
-module.exports = { getAIResponse, checkModelByTokenCount };
+module.exports = { getAIResponse, checkModelByTokenCount, cleanCodeFromMarkdown };

@@ -1,9 +1,10 @@
 const vscode = require("vscode");
+const path = require('path');
 const { getAIResponse } = require("./aiService");
 const { logInfo, logError, logDebug } = require('./logger');
-const { SolidPrinciples, getSolidRecommendationPrompt } = require("./prompts");
+const { SolidPrinciples, getSolidRecommendationPrompt, getSolidFixPrompt } = require("./prompts");
 const getSolidRecommendationWebviewContent = require('./webviews/solidRecommendationWebview');
-const { formatTextAsHTML, escapeHtml } = require('./textFormatterToHtml');
+const getSolidFixedWebviewContent = require('./webviews/solidFixedWebview');
 
 const solidDiagnostics = vscode.languages.createDiagnosticCollection('solid-principles');
 
@@ -60,7 +61,7 @@ function findClassPosition(code, className) {
 async function analyzeSolidPrinciples(code, languageId, principle = 'ALL', model) {
     logInfo(`Analyzing ${languageId} code for ${principle} principle`);
     
-    const supportedLanguages = ['java', 'csharp', 'typescript', 'javascript'];
+    const supportedLanguages = ['java', 'python', 'javascript', 'typescript'];
     if (!supportedLanguages.includes(languageId)) {
         logInfo(`Language ${languageId} is not supported for SOLID analysis`);
         return [];
@@ -344,7 +345,7 @@ function registerSolidQuickFixes(context) {
                     fixAction.command = {
                         command: 'ai-code-assistant.suggestSolidFix',
                         title: 'Suggest a fix',
-                        arguments: [document, diagnostic.range, diagnostic.code, diagnostic.message]
+                        arguments: [document, diagnostic.range, diagnostic.code, diagnostic.message, recommendation]
                     };
                     
                     actions.push(fixAction);
@@ -392,7 +393,55 @@ function registerSolidQuickFixes(context) {
                         }
                     );
                     
-                    panel.webview.html = getSolidRecommendationWebviewContent(principleCode, issue, detailedRecommendation);
+                    panel.webview.html = getSolidRecommendationWebviewContent(principleCode, issue, detailedRecommendation, model);
+
+                    panel.webview.onDidReceiveMessage(async (message) => {
+                        logDebug(`Received webview message: ${message.command}`);
+                        switch (message.command) {
+                            case "cancel":
+                                logInfo("User canceled operation");
+                                panel.dispose();
+                                vscode.window.showInformationMessage("Changes have been canceled.");
+                                break;
+                            
+                            case "changeModel":
+                                logInfo(`User changed model to: ${message.model}`);
+                                let newModel = message.model || model;
+                                logInfo(`Model changed to: ${newModel}`);
+                                
+                                panel.webview.postMessage({ command: "showLoading" });
+                                try {
+                                    const prompt = getSolidRecommendationPrompt(principleCode, issue, recommendation);
+                                    const newDetailedRecommendation = await getAIResponse(document.getText(), prompt, newModel);
+                                    panel.webview.html = getSolidRecommendationWebviewContent(principleCode, issue, newDetailedRecommendation, newModel);
+                                    logInfo(`Recommendation regenerated with model: ${newModel}`);
+                                } catch (error) {
+                                    logError(`Error regenerating with new model: ${error.message}`);
+                                    panel.webview.postMessage({ command: "hideLoading" });
+                                    vscode.window.showErrorMessage(`Failed to regenerate recommendation: ${error.message}`);
+                                }
+                                break;
+                            
+                            case "regenerate":
+                                logInfo("User requested regeneration");
+                                panel.webview.postMessage({ command: "showLoading" });
+                                try {
+                                    const prompt = getSolidRecommendationPrompt(principleCode, issue, recommendation);
+                                    const regeneratedRecommendation = await getAIResponse(document.getText(), prompt, model);
+                                    panel.webview.html = getSolidRecommendationWebviewContent(principleCode, issue, regeneratedRecommendation, model);
+                                    logInfo("Recommendation regeneration completed");
+                                } catch (error) {
+                                    logError(`Error regenerating recommendation: ${error.message}`);
+                                    panel.webview.postMessage({ command: "hideLoading" });
+                                    vscode.window.showErrorMessage(`Failed to regenerate recommendation: ${error.message}`);
+                                }
+                                break;
+
+                            default:
+                                logError(`Unknown command received: ${message.command}`);
+                                break;
+                        }
+                    });
                 });
                 vscode.window.setStatusBarMessage('$(check) Detailed recommendation is ready', 5000);
             } catch (error) {
@@ -403,116 +452,117 @@ function registerSolidQuickFixes(context) {
         }
     );
 
-    const suggestFixCmd = vscode.commands.registerCommand(
+    const suggestSolidFix = vscode.commands.registerCommand(
         'ai-code-assistant.suggestSolidFix',
-        async (document, range, principle, issue) => {
+        async (document, range, principle, issue, recommendation) => {
             try {
-                const codeToFix = document.getText(range);
-                
-                const config = vscode.workspace.getConfiguration('aiCodeAssistant');
-                const model = config.get('defaultModel');
-                
-                const prompt = `Пропоную виправлення для порушення принципу SOLID (${principle}): "${issue}".
-                Ось проблемний код:
-                
-                \`\`\`
-                ${codeToFix}
-                \`\`\`
-                
-                Запропонуй покращений код, який відповідає принципу ${principle}. Поверни лише виправлений код без пояснень.`;
-                
-                vscode.window.withProgress({
+                const fullDocumentText = document.getText();
+                const codeToFix = document.getText();
+                const workspacePath = vscode.workspace.workspaceFolders[0].uri.fsPath;
+                let model = vscode.workspace.getConfiguration('aiCodeAssistant').get('defaultModel');
+
+                await vscode.window.withProgress({
                     location: vscode.ProgressLocation.Notification,
-                    title: "Генерація виправлення SOLID проблеми...",
+                    title: "Preparing SOLID fix suggestion...",
                     cancellable: false
                 }, async (progress) => {
-                    const fixedCode = await getAIResponse(codeToFix, prompt, model);
-                    
+
+                    const comprehensiveRefactoringPrompt = getSolidFixPrompt(principle, issue, recommendation, codeToFix, document.languageId);
+                    logDebug(`Comprehensive refactoring prompt: ${comprehensiveRefactoringPrompt}`);
+
+                    const refactoringResponse = await getAIResponse(fullDocumentText, comprehensiveRefactoringPrompt, model);
+                    logDebug(`Received refactoring response: ${refactoringResponse}`);
+
+                    const refactoringPlan = JSON.parse(refactoringResponse);
+                    logDebug(`Parsed refactoring plan: ${JSON.stringify(refactoringPlan, null, 2)}`);
+
                     const panel = vscode.window.createWebviewPanel(
-                        "solidFix",
-                        `Виправлення ${principle}`,
+                        'solidRefactoring',
+                        `Refactoring: ${principle}`,
                         vscode.ViewColumn.Beside,
-                        {
-                            enableScripts: true,
-                            retainContextWhenHidden: true,
-                        }
+                        { enableScripts: true }
                     );
-                    
-                    panel.webview.html = `
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>Виправлення SOLID проблеми</title>
-                        <style>
-                            body { font-family: system-ui, sans-serif; padding: 20px; }
-                            h1 { font-size: 18px; margin-bottom: 10px; }
-                            pre { background-color: #f5f5f5; padding: 10px; border-radius: 5px; overflow: auto; }
-                            button { margin: 10px 5px 10px 0; padding: 8px 16px; cursor: pointer; }
-                            .success { background-color: #4CAF50; color: white; border: none; border-radius: 4px; }
-                            .cancel { background-color: #f44336; color: white; border: none; border-radius: 4px; }
-                            .container { display: flex; flex-direction: column; height: 95vh; }
-                            .code-container { flex-grow: 1; overflow: auto; }
-                            #fixed-code { white-space: pre-wrap; }
-                        </style>
-                    </head>
-                    <body>
-                        <div class="container">
-                            <h1>Запропоноване виправлення для ${principle}</h1>
-                            <p>${issue}</p>
-                            <div class="code-container">
-                                <pre id="fixed-code">${escapeHtml(fixedCode)}</pre>
-                            </div>
-                            <div>
-                                <button class="success" id="apply">Застосувати виправлення</button>
-                                <button class="cancel" id="cancel">Скасувати</button>
-                            </div>
-                        </div>
-                        <script>
-                            const vscode = acquireVsCodeApi();
-                            document.getElementById('apply').addEventListener('click', () => {
-                                vscode.postMessage({
-                                    command: 'applyFix',
-                                    code: document.getElementById('fixed-code').textContent
-                                });
-                            });
-                            document.getElementById('cancel').addEventListener('click', () => {
-                                vscode.postMessage({ command: 'cancel' });
-                            });
-                        </script>
-                    </body>
-                    </html>
-                    `;
-                    
+        
+                    panel.webview.html = getSolidFixedWebviewContent(refactoringPlan, principle, issue, model);
                     panel.webview.onDidReceiveMessage(async (message) => {
+                        logDebug(`Received webview message: ${message.command}`);
                         switch (message.command) {
-                            case 'applyFix':
-                                // Застосовуємо виправлення
-                                const editor = vscode.window.activeTextEditor;
-                                if (editor && editor.document.uri.toString() === document.uri.toString()) {
-                                    editor.edit(editBuilder => {
-                                        editBuilder.replace(range, message.code);
-                                    });
-                                    vscode.window.showInformationMessage("Виправлення застосовано.");
-                                }
+                            case "cancel":
+                                logInfo("User canceled operation");
                                 panel.dispose();
+                                vscode.window.showInformationMessage("Changes have been canceled.");
                                 break;
-                            case 'cancel':
-                                panel.dispose();
+                            
+                            case "changeModel":
+                                logInfo(`User changed model to: ${message.model}`);
+                                model = message.model || model;
+                                logInfo(`Model changed to: ${model}`);
+                                
+                                panel.webview.postMessage({ command: "showLoading" });
+                                try {
+                                    const prompt = getSolidFixPrompt(principle, issue, recommendation, codeToFix, document.languageId);
+                                    const newResponse = await getAIResponse(fullDocumentText, prompt, model);
+                                    logDebug(`Received SOLID fix suggestion response: ${newResponse}`);
+                                    const newRefactoringPlan = JSON.parse(escapeQuotesInCode(newResponse));
+                                    logDebug(`Parsed sanitized refactoring plan: ${newRefactoringPlan}`);
+                                    panel.webview.html = getSolidFixedWebviewContent(newRefactoringPlan, principle, issue, model);
+                                    panel.webview.postMessage({ command: "hideLoading" });
+                                    logInfo(`SOLID fix suggestion regenerated with model: ${model}`);
+                                } catch (error) {
+                                    logError(`Error regenerating with new model: ${error.message}`);
+                                    panel.webview.postMessage({ command: "hideLoading" });
+                                    vscode.window.showErrorMessage(`Failed to regenerate fix suggestion`);
+                                    if (error.stack) logDebug(error.stack);
+                                }
+                                break;
+                            
+                            case "regenerate":
+                                logInfo("User requested regeneration");
+                                panel.webview.postMessage({ command: "showLoading" });
+                                try {
+                                    const prompt = getSolidFixPrompt(principle, issue, recommendation, codeToFix, document.languageId);
+                                    const newResponse = await getAIResponse(fullDocumentText, prompt, model);
+                                    logDebug(`Received SOLID fix suggestion response: ${newResponse}`);
+                                    const newRefactoringPlan = JSON.parse(newResponse);
+                                    logDebug(`Parsed sanitized refactoring plan: ${newRefactoringPlan}`);
+                                    panel.webview.html = getSolidFixedWebviewContent(newRefactoringPlan, principle, issue, model);
+                                    panel.webview.postMessage({ command: "hideLoading" });
+                                    logInfo("SOLID fix suggestion regenerated");
+                                } catch (error) {
+                                    logError(`Error regenerating fix suggestion: ${error.message}`);
+                                    panel.webview.postMessage({ command: "hideLoading" });
+                                    vscode.window.showErrorMessage(`Failed to regenerate fix suggestion`);
+                                    if (error.stack) logDebug(error.stack);
+                                }
+                                break;
+
+                            default:
+                                logError(`Unknown command received: ${message.command}`);
                                 break;
                         }
                     });
                 });
+                vscode.window.setStatusBarMessage('$(check) SOLID fix suggestion is ready', 5000);
             } catch (error) {
-                logError(`Failed to suggest fix: ${error.message}`);
-                if (error.stack) logDebug(error.stack);
-                vscode.window.showErrorMessage(`An error occurred while generating the fix: ${error.message}`);
+                vscode.window.showErrorMessage(
+                    `Error SOLID fix suggestion`
+                );
+                logError(`Error SOLID fix suggestion: ${message.command}`);
             }
         }
     );
     
-    context.subscriptions.push(fixProvider, showRecommendationCmd, suggestFixCmd);
+    context.subscriptions.push(fixProvider, showRecommendationCmd, suggestSolidFix);
+}
+
+function escapeQuotesInCode(jsonString) {
+    return jsonString.replace(/"fullCode": "(.*?)",\s*"purpose"/gs, function(match, codeContent) {
+        let escapedContent = codeContent.replace(/([^\\])(")(?=[^\\])/g, '$1\\"');
+        if (escapedContent.startsWith('"') && !escapedContent.startsWith('\\"')) {
+        escapedContent = '\\' + escapedContent;
+        }
+        return '"fullCode": "' + escapedContent + '",\n"purpose"';
+    });
 }
 
 module.exports = {
