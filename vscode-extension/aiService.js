@@ -70,14 +70,14 @@ async function getChatGPTResponse(code, prompt, currentModel) {
     }
 }
 
-async function getGrokResponse(code, prompt) {
+async function getGrokResponse(code, prompt, currentModel) {
     logDebug("Starting Grok API request");
     try {
         const startTime = Date.now();
         const response = await axios.post(
             "https://api.x.ai/v1/chat/completions",
             {
-                model: "grok-2-latest",
+                model: currentModel,
                 messages: [
                     { role: "system", content: "You are an expert in working with code and an experienced developer." },
                     { role: "user", content: `${prompt}\n\n${code}` }
@@ -105,10 +105,10 @@ async function getGrokResponse(code, prompt) {
     }
 }
 
-async function getGrokResponse_2(code, prompt) {
+async function getGrokResponse_2(code, prompt, currentModel) {
     try {
         const completion = await grok.chat.completions.create({
-            model: "grok-2-latest",
+            model: currentModel,
             messages: [
                 { role: "system", content: "You are an expert in working with code and an experienced developer." },
                 { role: "user", content: `${prompt}\n\n${code}` }
@@ -188,9 +188,10 @@ function checkModelByTokenCount(code, currentModel, vscode) {
         const GPT_3_5_TURBO_LIMIT = 4000;
         const GPT_3_5_TURBO_16K_LIMIT = 16000;
         const DEEPSEEK_LIMIT = 8000;
-        const GEMINI_LIMIT = 8000;
+        const GEMINI_2_FLASH_LIMIT = 8000;
         const CLAUDE_LIMIT = 20000;
-        const GROK_LIMIT = 64000;
+        const GROK_LIMIT = 60000;
+        const GEMINI_2_5_PRO_LIMIT = 65500;
 
         
         if (tokenCount <= GPT_3_5_TURBO_LIMIT) {
@@ -213,7 +214,7 @@ function checkModelByTokenCount(code, currentModel, vscode) {
             return "deepseek-chat";
         }
 
-        if (tokenCount <= GEMINI_LIMIT) {
+        if (tokenCount <= GEMINI_2_FLASH_LIMIT) {
             if (currentModel != "gemini-1.5-pro-latest" && currentModel != "gemini-2.0-flash") {
                 logInfo(`Switching to Gemini (${tokenCount} > ${DEEPSEEK_LIMIT})`);
                 vscode.window.showInformationMessage("The code exceeds limits. Switching to gemini-1.5-pro-latest for processing.");
@@ -230,14 +231,24 @@ function checkModelByTokenCount(code, currentModel, vscode) {
         }
 
         if (tokenCount <= GROK_LIMIT) {
-            if (currentModel != "grok-2-latest") {
+            if (currentModel != "grok-2-latest" && currentModel != "grok-3-latest") {
                 logInfo(`Switching to Grok (${tokenCount} > ${CLAUDE_LIMIT})`);
-                vscode.window.showInformationMessage("The code exceeds limits. Switching to grok-2-latest for processing.");
+                vscode.window.showInformationMessage("The code exceeds limits. Switching to grok-3-latest for processing.");
             }
-            return "grok-2-latest";
+            return "grok-3-latest";
         }
-        logError(`Code too large! Tokens: ${tokenCount}, Max: ${GROK_LIMIT}`);
-        vscode.window.showErrorMessage(`The selected code is too large (${tokenCount} tokens). Maximum supported: ${GROK_LIMIT} tokens.`);
+
+        if (tokenCount <= GEMINI_2_5_PRO_LIMIT) {
+            if (currentModel != "gemini-2.5-pro-exp-03-25") {
+                logInfo(`Switching to Grok (${tokenCount} > ${CLAUDE_LIMIT})`);
+                vscode.window.showInformationMessage("The code exceeds limits. Switching to gemini-2.5-pro-exp-03-25 for processing.");
+            }
+            return "gemini-2.5-pro-exp-03-25";
+        }
+
+        
+        logError(`Code too large! Tokens: ${tokenCount}, Max: ${GEMINI_2_5_PRO_LIMIT}`);
+        vscode.window.showErrorMessage(`The selected code is too large (${tokenCount} tokens). Maximum supported: ${GEMINI_2_5_PRO_LIMIT} tokens.`);
         return currentModel;
     } catch (error) {
         logError(`Token counting failed: ${error.message}`);
@@ -252,12 +263,15 @@ async function getAIResponse(code, prompt, currentModel) {
         const startTime = Date.now();
         
         switch(currentModel) {
+            case "gpt-4-turbo":
             case "gpt-3.5-turbo":
             case "gpt-3.5-turbo-16k":
+            case "gpt-4o":
                 response = await getChatGPTResponse(code, prompt, currentModel);
                 break;
             case "grok-2-latest":
-                response = await getGrokResponse(code, prompt);
+            case "grok-3-latest":
+                response = await getGrokResponse(code, prompt, currentModel);
                 break;
             case "deepseek-chat":
                 response = await getDeepseekResponse(code, prompt);
@@ -268,6 +282,7 @@ async function getAIResponse(code, prompt, currentModel) {
                 break;
             case "gemini-2.0-flash":
             case "gemini-1.5-pro-latest":
+            case "gemini-2.5-pro-exp-03-25":
                 response = await getGeminiResponse(code, prompt, currentModel);
                 break;
             default:
