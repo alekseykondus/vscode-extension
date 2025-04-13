@@ -43,7 +43,7 @@ Example:
 ```json
 {
   "aiCodeAssistant.debugMode": false,
-  "aiCodeAssistant.defaultModel": "gpt-4",
+  "aiCodeAssistant.defaultModel": "grok-2-latest",
   "aiCodeAssistant.enableAutoSolidAnalysis": true
 }
 ```
