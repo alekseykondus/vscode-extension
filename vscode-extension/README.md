@@ -36,7 +36,7 @@ The extension can be configured through the settings.json file in the .vscode di
 | Setting                                   | Description                                                    |
 |-------------------------------------------|----------------------------------------------------------------|
 | `aiCodeAssistant.debugMode`               | Enable/disable debug logging (`true`/`false`).                 |
-| `aiCodeAssistant.defaultModel`            | Specify the default AI model for processing (e.g., `"gpt-4"`). |
+| `aiCodeAssistant.defaultModel`            | Specify the default AI model for processing (e.g., `"grok-2-latest"`). |
 | `aiCodeAssistant.enableAutoSolidAnalysis` | Toggle automatic SOLID principle analysis (`true`/`false`).    |
 
 Example:
