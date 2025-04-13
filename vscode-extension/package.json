@@ -1,6 +1,7 @@
 {
   "name": "smart-ai-code-assistant",
   "publisher": "AI-Code-Assistant",
+  "icon": "https://github.com/alekseykondus/vscode-extension/blob/main/vscode-extension/AI-Code-Assistant.jpg",
   "displayName": "Smart AI Code Assistant",
   "description": "AI-powered code assistance with documentation generation, refactoring and explanation",
   "version": "0.0.1",
