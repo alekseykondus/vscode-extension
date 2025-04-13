@@ -1,65 +1,77 @@
-# vscode-extension README
+# AI Code Assistant
 
-This is the README for your extension "vscode-extension". After writing up a brief description, we recommend including the following sections.
+🚀 **Supercharge your coding workflow** with the **AI Code Assistant**, a powerful Visual Studio Code extension designed to streamline development for JavaScript, Python, and Java. Generate documentation, refactor code, explain logic, create tests, and ensure SOLID principles—all with a few clicks.
 
-## Features
+## ✨ Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- 📝 **Auto-Generate Documentation**: Create detailed, professional documentation for JavaScript, Python, and Java code.
+- 🔄 **Smart Refactoring**: Improve code readability, performance, and maintainability with AI-powered suggestions.
+- 🧠 **Line-by-Line Explanations**: Understand complex code with clear, concise breakdowns.
+- ⚙️ **Code from Signatures**: Generate functional code from function signatures in seconds.
+- 🧪 **Unit Test Generation**: Automatically create unit tests for JavaScript, Python, and Java projects.
+- 🏛️ **SOLID Principle Analysis**: Analyze code for SOLID compliance and get actionable suggestions to improve design.
 
-For example if there is an image subfolder under your extension project workspace:
+## 🛠️ Requirements
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Visual Studio Code** version **1.97.0** or higher.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+## 🎮 Commands
 
-## Requirements
+Unlock the full power of AI Code Assistant with these commands:
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+| Command                                       | Description                              |
+|-----------------------------------------------|------------------------------------------|
+| `ai-code-assistant.generateCodeDocumentation` | Generate detailed code documentation.    |
+| `ai-code-assistant.refactorCode`              | Refactor code for better quality.        |
+| `ai-code-assistant.generateExplanation`       | Explain code line by line.               |
+| `ai-code-assistant.generateCodeFromSignature` | Generate code from a function signature. |
+| `ai-code-assistant.generateTests`             | Create unit tests automatically.         |
+| `ai-code-assistant.showSolidRecommendation`   | Analyze SOLID principles compliance.     |
+| `ai-code-assistant.suggestSolidFix`           | Suggest fixes for SOLID violations.      |
 
-## Extension Settings
+## ⚙️ Configuration
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+The extension can be configured through the settings.json file in the .vscode directory. The following settings are available:
 
-For example:
+| Setting                                   | Description                                                    |
+|-------------------------------------------|----------------------------------------------------------------|
+| `aiCodeAssistant.debugMode`               | Enable/disable debug logging (`true`/`false`).                 |
+| `aiCodeAssistant.defaultModel`            | Specify the default AI model for processing (e.g., `"gpt-4"`). |
+| `aiCodeAssistant.enableAutoSolidAnalysis` | Toggle automatic SOLID principle analysis (`true`/`false`).    |
 
-This extension contributes the following settings:
+Example:
+```json
+{
+  "aiCodeAssistant.debugMode": false,
+  "aiCodeAssistant.defaultModel": "gpt-4",
+  "aiCodeAssistant.enableAutoSolidAnalysis": true
+}
+```
 
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+## 🐞 Known Issues
 
-## Known Issues
+- The extension currently supports only JavaScript, Python, and Java for documentation generation and refactoring.
+- SOLID principle analysis is limited to Java, Python, JavaScript, and TypeScript.
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+## 📜 Release Notes
 
-## Release Notes
+### 🎉 1.0.0
 
-Users appreciate release notes as you update your extension.
+**Initial Release**  
+Launched with core features:
+- Documentation generation
+- Code refactoring
+- Line-by-line explanations
+- Code generation from signatures
+- Unit test creation
+- SOLID principle analysis
 
-### 1.0.0
 
-Initial release of ...
+## 🚀 Get Started
 
-### 1.0.1
+1. Install the extension from the [VS Code Marketplace](https://marketplace.visualstudio.com/).
+2. Open a JavaScript, Python, or Java file.
+3. Select the desired piece of code and use the command palette (`Ctrl+Shift+P`) to run any `ai-code-assistant` command.
 
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
-
-## Working with Markdown
-
-You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets
-
-## For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+**Enjoy coding smarter with AI Code Assistant!**  
+Have feedback or ideas? [Let us know](https://github.com/alekseykondus/vscode-extension/issues)!
