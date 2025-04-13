@@ -1,7 +1,7 @@
 {
-  "name": "ai-code-assistant",
-  "publisher": "publisher-name",
-  "displayName": "AI Code Assistant",
+  "name": "smart-ai-code-assistant",
+  "publisher": "AI-Code-Assistant",
+  "displayName": "Smart AI Code Assistant",
   "description": "AI-powered code assistance with documentation generation, refactoring and explanation",
   "version": "0.0.1",
   "engines": {
