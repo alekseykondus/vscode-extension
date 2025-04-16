@@ -4,7 +4,7 @@
   "icon": "AI-Code-Assistant.jpg",
   "displayName": "Smart AI Code Assistant",
   "description": "AI-powered code assistance with documentation generation, refactoring and explanation",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "sponsor": {
     "url": "https://ko-fi.com/ai_code_assistant"
   },
@@ -35,8 +35,8 @@
         },
         "aiCodeAssistant.enableAutoSolidAnalysis": {
           "type": "boolean",
-          "default": true,
-          "description": "Automatically analyze code for compliance with SOLID principlesD"
+          "default": false,
+          "description": "Automatically analyze code for compliance with SOLID principles"
         }
       }
     },

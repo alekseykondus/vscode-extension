@@ -71,8 +71,8 @@ function getModelSelectorHTML(currentModel) {
             <option value="grok-3-latest" ${currentModel === "grok-3-latest" ? "selected" : ""}>Grok-3</option>
             <option value="grok-2-latest" ${currentModel === "grok-2-latest" ? "selected" : ""}>Grok-2</option>
             <option value="deepseek-chat" ${currentModel === "deepseek-chat" ? "selected" : ""}>Deepseek-Chat</option>
-            <option value="claude-3-7-sonnet-20250219" ${currentModel === "claude-3-7-sonnet-20250219" ? "selected" : ""}>Claude-3-7-sonnet</option>
-            <option value="claude-3-5-haiku-20241022" ${currentModel === "claude-3-5-haiku-20241022" ? "selected" : ""}>Claude-3-5-haiku</option>
+            <option value="claude-3-7-sonnet-20250219" ${currentModel === "claude-3-7-sonnet-20250219" ? "selected" : ""}>Claude-3.7-sonnet</option>
+            <option value="claude-3-5-haiku-20241022" ${currentModel === "claude-3-5-haiku-20241022" ? "selected" : ""}>Claude-3.5-haiku</option>
             <option value="gemini-2.5-pro-exp-03-25" ${currentModel === "gemini-2.5-pro-exp-03-25" ? "selected" : ""}>Gemini-2.5-Pro</option>
             <option value="gemini-1.5-pro-latest" ${currentModel === "gemini-1.5-pro-latest" ? "selected" : ""}>Gemini-1.5-Pro</option>
             <option value="gemini-2.0-flash" ${currentModel === "gemini-2.0-flash" ? "selected" : ""}>Gemini-2.0-Flash</option>
