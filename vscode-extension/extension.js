@@ -7,16 +7,14 @@ const { registerSolidQuickFixes, registerDocumentListeners } = require('./solidA
 const { extractJavadocsFromProcessed, insertJavadocsUsingAST } = require("./javadocInserter");
 const { extractDocstringsFromProcessed, insertDocstringsUsingAST } = require("./pythondocInserter");
 const { extractJSDocsFromProcessed, insertJSDocsUsingAST } = require('./jsdocInserter');
-const { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts } = require("./prompts");
+const { getPrompt, documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts } = require("./prompts");
 const { getWebviewContent } = require("./webviews/webviewTemplate");
 
 const { generateTestFileName, getExistingTestFiles, determineTestFilePath, saveTestsToFile } = require('./testGenerationService');
 
-let currentModel = vscode.workspace.getConfiguration('aiCodeAssistant').get('defaultModel');
+const { runExperiment } = require('./ai-refactoring-benchmark/refactoring_benchmark');
 
-function getPrompt(prompts, languageId) {
-    return prompts[languageId] || prompts.default;
-}
+let currentModel = vscode.workspace.getConfiguration('aiCodeAssistant').get('defaultModel');
 	
 function extractDocumentation(originalCode, processedCode, languageId) {
     logDebug("Starting documentation extraction...");
@@ -66,6 +64,8 @@ function extractDocumentation(originalCode, processedCode, languageId) {
 function activate(context) {
     setupLogger(context);
 
+    //runExperiment();
+    
     let config_ = vscode.workspace.getConfiguration('aiCodeAssistant');
     logDebug(`Config object: ${JSON.stringify(config_)}`);
     

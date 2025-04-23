@@ -1,0 +1,7724 @@
+{
+  "gpt-4-turbo": [
+    {
+      "attempt": 1,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 21277
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21506
+    },
+    {
+      "attempt": 3,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 19719
+    },
+    {
+      "attempt": 4,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 14744
+    },
+    {
+      "attempt": 5,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 14158
+    },
+    {
+      "attempt": 6,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 27234
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 30673
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 28765
+    },
+    {
+      "attempt": 9,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 14914
+    },
+    {
+      "attempt": 10,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 34947
+    },
+    {
+      "attempt": 11,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 16462
+    },
+    {
+      "attempt": 12,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 29550
+    },
+    {
+      "attempt": 13,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 15013
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 20642
+    },
+    {
+      "attempt": 15,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 18907
+    },
+    {
+      "attempt": 16,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 20208
+    },
+    {
+      "attempt": 17,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 22024
+    },
+    {
+      "attempt": 18,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 29655
+    },
+    {
+      "attempt": 19,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 33700
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15173
+    },
+    {
+      "attempt": 21,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 22937
+    },
+    {
+      "attempt": 22,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 14968
+    },
+    {
+      "attempt": 23,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 18290
+    },
+    {
+      "attempt": 24,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 19454
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14659
+    },
+    {
+      "attempt": 26,
+      "passed": 22,
+      "failed": 10,
+      "total": 32,
+      "responseTime": 13019
+    },
+    {
+      "attempt": 27,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 26715
+    },
+    {
+      "attempt": 28,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 27011
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 19235
+    },
+    {
+      "attempt": 30,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 20677
+    },
+    {
+      "attempt": 31,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 24367
+    },
+    {
+      "attempt": 32,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 18721
+    },
+    {
+      "attempt": 33,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 16589
+    },
+    {
+      "attempt": 34,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 13233
+    },
+    {
+      "attempt": 35,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 25387
+    },
+    {
+      "attempt": 36,
+      "passed": 31,
+      "failed": 1,
+      "total": 32,
+      "responseTime": 22907
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 23661
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15887
+    },
+    {
+      "attempt": 39,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 18225
+    },
+    {
+      "attempt": 40,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 18971
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 26488
+    },
+    {
+      "attempt": 42,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 16199
+    },
+    {
+      "attempt": 43,
+      "passed": 24,
+      "failed": 8,
+      "total": 32,
+      "responseTime": 24768
+    },
+    {
+      "attempt": 44,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 21448
+    },
+    {
+      "attempt": 45,
+      "passed": 26,
+      "failed": 6,
+      "total": 32,
+      "responseTime": 14594
+    },
+    {
+      "attempt": 46,
+      "passed": 31,
+      "failed": 1,
+      "total": 32,
+      "responseTime": 21748
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 63050
+    },
+    {
+      "attempt": 48,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 16530
+    },
+    {
+      "attempt": 49,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 18648
+    },
+    {
+      "attempt": 50,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 28004
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 27616
+    },
+    {
+      "attempt": 52,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 19719
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22450
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 28081
+    },
+    {
+      "attempt": 55,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 13036
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15248
+    },
+    {
+      "attempt": 57,
+      "passed": 24,
+      "failed": 8,
+      "total": 32,
+      "responseTime": 20827
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13941
+    },
+    {
+      "attempt": 59,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 13357
+    },
+    {
+      "attempt": 60,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 16461
+    },
+    {
+      "attempt": 61,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 18661
+    },
+    {
+      "attempt": 62,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 22514
+    },
+    {
+      "attempt": 63,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 25216
+    },
+    {
+      "attempt": 64,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 17198
+    },
+    {
+      "attempt": 65,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 19738
+    },
+    {
+      "attempt": 66,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 22089
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22413
+    },
+    {
+      "attempt": 68,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 17175
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13913
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 28006
+    },
+    {
+      "attempt": 71,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 21023
+    },
+    {
+      "attempt": 72,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 20117
+    },
+    {
+      "attempt": 73,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 14900
+    },
+    {
+      "attempt": 74,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 32124
+    },
+    {
+      "attempt": 75,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 18693
+    },
+    {
+      "attempt": 76,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 19989
+    },
+    {
+      "attempt": 77,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 28482
+    },
+    {
+      "attempt": 78,
+      "passed": 22,
+      "failed": 10,
+      "total": 32,
+      "responseTime": 14257
+    },
+    {
+      "attempt": 79,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 19568
+    },
+    {
+      "attempt": 80,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 27177
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21287
+    },
+    {
+      "attempt": 82,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 19519
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22858
+    },
+    {
+      "attempt": 84,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 24573
+    },
+    {
+      "attempt": 85,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 22027
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21237
+    },
+    {
+      "attempt": 87,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 24886
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 23289
+    },
+    {
+      "attempt": 89,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 18011
+    },
+    {
+      "attempt": 90,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 23198
+    },
+    {
+      "attempt": 91,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 16545
+    },
+    {
+      "attempt": 92,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 17003
+    },
+    {
+      "attempt": 93,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 20089
+    },
+    {
+      "attempt": 94,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 19665
+    },
+    {
+      "attempt": 95,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 18725
+    },
+    {
+      "attempt": 96,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 27960
+    },
+    {
+      "attempt": 97,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 27996
+    },
+    {
+      "attempt": 98,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 21481
+    },
+    {
+      "attempt": 99,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 13739
+    },
+    {
+      "attempt": 100,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 30286
+    }
+  ],
+  "gpt-3.5-turbo": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7911
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7393
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6813
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9165
+    },
+    {
+      "attempt": 5,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7228
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7880
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9058
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7318
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7239
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7062
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7656
+    },
+    {
+      "attempt": 12,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 9927
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7822
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7102
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6532
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6739
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10620
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6923
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6913
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6503
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7564
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7122
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8288
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7052
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7025
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7220
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7609
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8693
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6714
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8874
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8280
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17286
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6709
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13725
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8922
+    },
+    {
+      "attempt": 36,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 7246
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8953
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6579
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6756
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11136
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6271
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7135
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6272
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6348
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6000
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6655
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7399
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7939
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7622
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6212
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7758
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7476
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6542
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6262
+    },
+    {
+      "attempt": 55,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 6308
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8932
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6341
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6521
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6280
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6759
+    },
+    {
+      "attempt": 61,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 6186
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6897
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6501
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8759
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5704
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8968
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6017
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6524
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8053
+    },
+    {
+      "attempt": 70,
+      "passed": 30,
+      "failed": 2,
+      "total": 32,
+      "responseTime": 6410
+    },
+    {
+      "attempt": 71,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 6579
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6809
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7988
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7392
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10070
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7008
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7800
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7508
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6671
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6342
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7788
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7289
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7148
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11803
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14337
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10148
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6252
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6610
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6950
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8095
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6702
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6858
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8187
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6882
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6848
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7301
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6914
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6835
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7487
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6627
+    }
+  ],
+  "gpt-4o": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9190
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6348
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6127
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5591
+    },
+    {
+      "attempt": 5,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 10266
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6255
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13781
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6713
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11826
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6555
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9444
+    },
+    {
+      "attempt": 12,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6081
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9953
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7065
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6529
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5388
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5197
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6024
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6191
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6306
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9784
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12451
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7140
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8241
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9276
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7550
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6574
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8318
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9244
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7736
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5675
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8884
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6283
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6322
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6365
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4941
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6225
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7685
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5622
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5342
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4575
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6227
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13808
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6195
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6656
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5333
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11593
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6946
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8701
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9900
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5829
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8205
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6989
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6445
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6316
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8461
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8688
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7062
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7219
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7163
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9376
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6339
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7293
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6225
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6617
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6226
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4841
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6366
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6644
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6207
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6009
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5646
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5929
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7038
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8785
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7175
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6850
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6355
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10069
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8154
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11268
+    },
+    {
+      "attempt": 82,
+      "passed": 29,
+      "failed": 3,
+      "total": 32,
+      "responseTime": 8226
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8735
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10849
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12480
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7817
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7668
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12333
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6564
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7288
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8712
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6052
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7119
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16719
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6397
+    },
+    {
+      "attempt": 96,
+      "passed": 27,
+      "failed": 5,
+      "total": 32,
+      "responseTime": 12068
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 5684
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6673
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6522
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 6825
+    }
+  ],
+  "grok-3-latest": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10527
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16136
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13268
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10721
+    },
+    {
+      "attempt": 5,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 4053
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 24062
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18268
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11122
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13839
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 19190
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17613
+    },
+    {
+      "attempt": 12,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 180436
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11659
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10465
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14671
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 28903
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17033
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21348
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7942
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12223
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16005
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 25945
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18643
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22747
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 39744
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11813
+    },
+    {
+      "attempt": 27,
+      "passed": 30,
+      "failed": 2,
+      "total": 32,
+      "responseTime": 50589
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16980
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13145
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12056
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11854
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14239
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14762
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9683
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9465
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14177
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18818
+    },
+    {
+      "attempt": 38,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 180556
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22295
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17947
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 36991
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 23057
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 25201
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18734
+    },
+    {
+      "attempt": 45,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 40450
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 19302
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18488
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11328
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21796
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14007
+    },
+    {
+      "attempt": 51,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 10251
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15248
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14175
+    },
+    {
+      "attempt": 54,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 7040
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11561
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9406
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14930
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9414
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21607
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13385
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16455
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15176
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22221
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10191
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14783
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12021
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13467
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 28447
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9432
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15826
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10987
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 22727
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14243
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14548
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17997
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11195
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12873
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10993
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13327
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13631
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18744
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16663
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 20589
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8905
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12529
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16236
+    },
+    {
+      "attempt": 87,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 26256
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13068
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 21374
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16049
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 27793
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 19837
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13346
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11890
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8908
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14113
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12656
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10324
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18777
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18416
+    }
+  ],
+  "grok-2-latest": [
+    {
+      "attempt": 1,
+      "passed": 25,
+      "failed": 7,
+      "total": 32,
+      "responseTime": 9199
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7770
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9508
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7751
+    },
+    {
+      "attempt": 5,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8731
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9472
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10005
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7548
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7557
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8467
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8217
+    },
+    {
+      "attempt": 12,
+      "passed": 25,
+      "failed": 7,
+      "total": 32,
+      "responseTime": 7761
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7568
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7955
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8476
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7469
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8016
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9126
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8816
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8854
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8218
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8549
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7844
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7664
+    },
+    {
+      "attempt": 25,
+      "passed": 25,
+      "failed": 7,
+      "total": 32,
+      "responseTime": 8705
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7683
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9598
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8881
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9359
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7780
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9100
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8371
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7838
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7721
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8498
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8364
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7850
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8701
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8168
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7748
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8127
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11066
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8650
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7537
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8129
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8491
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8039
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7933
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9516
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8725
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8006
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8369
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8393
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7829
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10127
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8059
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8449
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7547
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8684
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9665
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7803
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7951
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9002
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9529
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10302
+    },
+    {
+      "attempt": 66,
+      "passed": 25,
+      "failed": 7,
+      "total": 32,
+      "responseTime": 7704
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7494
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8898
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9541
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7499
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7700
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9449
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7811
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9711
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8628
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7922
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9444
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8266
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7881
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8515
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9221
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10203
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8426
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7746
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8150
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9548
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9211
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7621
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7526
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10277
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8229
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8105
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7573
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8099
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9680
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7633
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 7628
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8023
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8910
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 8750
+    }
+  ],
+  "deepseek-chat": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33240
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32386
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32665
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33270
+    },
+    {
+      "attempt": 5,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33184
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32609
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33632
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33367
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33397
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34460
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33842
+    },
+    {
+      "attempt": 12,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34268
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32124
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33122
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 31916
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33481
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33422
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34488
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32207
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32277
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32491
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33065
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32642
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32955
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 35975
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33844
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32700
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32417
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32698
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32983
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33251
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32441
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32650
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33004
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 35083
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34591
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33460
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33222
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32321
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32954
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33063
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32709
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 31988
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33212
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33141
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32294
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 31965
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34310
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33071
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33295
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33736
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32711
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33215
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32807
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34167
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32895
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32571
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32900
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32842
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33304
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32326
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32629
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32900
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 31962
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32260
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32489
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32497
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34108
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33124
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33709
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32945
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34058
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33655
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33354
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33439
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32876
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32900
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34515
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33765
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32548
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32863
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32368
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33111
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32923
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32530
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34477
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34266
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32830
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32950
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33058
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33154
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32806
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33221
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32981
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32828
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34291
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32096
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 34831
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 33308
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 32983
+    }
+  ],
+  "claude-3-7-sonnet-20250219": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10308
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11056
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10181
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10831
+    },
+    {
+      "attempt": 5,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10470
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11193
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11439
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10594
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10410
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10707
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11165
+    },
+    {
+      "attempt": 12,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12630
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10762
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10592
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10459
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10796
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10564
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10521
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10718
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11197
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10408
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10302
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10770
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11181
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10457
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10302
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10417
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11159
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10506
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10567
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11242
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10819
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10753
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11093
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10703
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10738
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10589
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10414
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11082
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10404
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10941
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10568
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11138
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10730
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10523
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10508
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10914
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11303
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10351
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10793
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11277
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11093
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10792
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11055
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11395
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10778
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11321
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11009
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10904
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12409
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11116
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10641
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11304
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10752
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11036
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10614
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10692
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10701
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10391
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10775
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10522
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10540
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10767
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10770
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11597
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10765
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10263
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10452
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10724
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10655
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11134
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11176
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10819
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10419
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10564
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10542
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10679
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10872
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10997
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10899
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10587
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10530
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10471
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11056
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10471
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11377
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10947
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10932
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10988
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10471
+    }
+  ],
+  "claude-3-5-haiku-20241022": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12462
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11955
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12066
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18960
+    },
+    {
+      "attempt": 5,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13020
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12955
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12202
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17377
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12228
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11761
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17855
+    },
+    {
+      "attempt": 12,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16981
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12152
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17115
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16983
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16995
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17598
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17026
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11773
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16877
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16861
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17089
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18480
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16034
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12910
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12863
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17896
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12827
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15121
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 19907
+    },
+    {
+      "attempt": 31,
+      "passed": 26,
+      "failed": 6,
+      "total": 32,
+      "responseTime": 16723
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 19431
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17027
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15912
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13200
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18616
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16216
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14099
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18565
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17640
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18608
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 16893
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12608
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11727
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15317
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13056
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12309
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12674
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17592
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15318
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12768
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14856
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11323
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11944
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11635
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13734
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11363
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11593
+    },
+    {
+      "attempt": 59,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11055
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 14266
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11872
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11899
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12160
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13074
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12052
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11685
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13523
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12396
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12104
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11698
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 15960
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11842
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13592
+    },
+    {
+      "attempt": 74,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11793
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11651
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12555
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12012
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11519
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10929
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12243
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11709
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11418
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13548
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11498
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13369
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11311
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12935
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11706
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11880
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12483
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12804
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12274
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11723
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 18226
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 40899
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 17930
+    },
+    {
+      "attempt": 97,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12059
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 11069
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 12334
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 13489
+    }
+  ],
+  "gemini-2.5-pro-exp-03-25": [
+    {
+      "attempt": 1,
+      "passed": 24,
+      "failed": 8,
+      "total": 32,
+      "responseTime": 20422
+    },
+    {
+      "attempt": 2,
+      "passed": 23,
+      "failed": 9,
+      "total": 32,
+      "responseTime": 25200
+    },
+    {
+      "attempt": 3,
+      "passed": 19,
+      "failed": 13,
+      "total": 32,
+      "responseTime": 30701
+    },
+    {
+      "attempt": 4,
+      "passed": 21,
+      "failed": 11,
+      "total": 32,
+      "responseTime": 23487
+    },
+    {
+      "attempt": 5,
+      "passed": 24,
+      "failed": 8,
+      "total": 32,
+      "responseTime": 23133
+    },
+    {
+      "attempt": 6,
+      "passed": 22,
+      "failed": 10,
+      "total": 32,
+      "responseTime": 59015
+    },
+    {
+      "attempt": 7,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 317
+    },
+    {
+      "attempt": 8,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 194
+    },
+    {
+      "attempt": 9,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 276
+    },
+    {
+      "attempt": 10,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 179
+    },
+    {
+      "attempt": 11,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    },
+    {
+      "attempt": 12,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 194
+    },
+    {
+      "attempt": 13,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 174
+    },
+    {
+      "attempt": 14,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 296
+    },
+    {
+      "attempt": 15,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 211
+    },
+    {
+      "attempt": 16,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 215
+    },
+    {
+      "attempt": 17,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 171
+    },
+    {
+      "attempt": 18,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 271
+    },
+    {
+      "attempt": 19,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 185
+    },
+    {
+      "attempt": 20,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 165
+    },
+    {
+      "attempt": 21,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 164
+    },
+    {
+      "attempt": 22,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 287
+    },
+    {
+      "attempt": 23,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 168
+    },
+    {
+      "attempt": 24,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 168
+    },
+    {
+      "attempt": 25,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 175
+    },
+    {
+      "attempt": 26,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 196
+    },
+    {
+      "attempt": 27,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 273
+    },
+    {
+      "attempt": 28,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 180
+    },
+    {
+      "attempt": 29,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 190
+    },
+    {
+      "attempt": 30,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 313
+    },
+    {
+      "attempt": 31,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 173
+    },
+    {
+      "attempt": 32,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 150
+    },
+    {
+      "attempt": 33,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 275
+    },
+    {
+      "attempt": 34,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 140
+    },
+    {
+      "attempt": 35,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 158
+    },
+    {
+      "attempt": 36,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 176
+    },
+    {
+      "attempt": 37,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 177
+    },
+    {
+      "attempt": 38,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 273
+    },
+    {
+      "attempt": 39,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 250
+    },
+    {
+      "attempt": 40,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 160
+    },
+    {
+      "attempt": 41,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 181
+    },
+    {
+      "attempt": 42,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 158
+    },
+    {
+      "attempt": 43,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 163
+    },
+    {
+      "attempt": 44,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 169
+    },
+    {
+      "attempt": 45,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 274
+    },
+    {
+      "attempt": 46,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 283
+    },
+    {
+      "attempt": 47,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 261
+    },
+    {
+      "attempt": 48,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 169
+    },
+    {
+      "attempt": 49,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 308
+    },
+    {
+      "attempt": 50,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 162
+    },
+    {
+      "attempt": 51,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 162
+    },
+    {
+      "attempt": 52,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 158
+    },
+    {
+      "attempt": 53,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 147
+    },
+    {
+      "attempt": 54,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 141
+    },
+    {
+      "attempt": 55,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    },
+    {
+      "attempt": 56,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 178
+    },
+    {
+      "attempt": 57,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 259
+    },
+    {
+      "attempt": 58,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 274
+    },
+    {
+      "attempt": 59,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    },
+    {
+      "attempt": 60,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 163
+    },
+    {
+      "attempt": 61,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 146
+    },
+    {
+      "attempt": 62,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 275
+    },
+    {
+      "attempt": 63,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 153
+    },
+    {
+      "attempt": 64,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 166
+    },
+    {
+      "attempt": 65,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 182
+    },
+    {
+      "attempt": 66,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 169
+    },
+    {
+      "attempt": 67,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 157
+    },
+    {
+      "attempt": 68,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 224
+    },
+    {
+      "attempt": 69,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 166
+    },
+    {
+      "attempt": 70,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 170
+    },
+    {
+      "attempt": 71,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 148
+    },
+    {
+      "attempt": 72,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 264
+    },
+    {
+      "attempt": 73,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 277
+    },
+    {
+      "attempt": 74,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 140
+    },
+    {
+      "attempt": 75,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 166
+    },
+    {
+      "attempt": 76,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 177
+    },
+    {
+      "attempt": 77,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 164
+    },
+    {
+      "attempt": 78,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 140
+    },
+    {
+      "attempt": 79,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 297
+    },
+    {
+      "attempt": 80,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 270
+    },
+    {
+      "attempt": 81,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 154
+    },
+    {
+      "attempt": 82,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 275
+    },
+    {
+      "attempt": 83,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    },
+    {
+      "attempt": 84,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 168
+    },
+    {
+      "attempt": 85,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 270
+    },
+    {
+      "attempt": 86,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 186
+    },
+    {
+      "attempt": 87,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 184
+    },
+    {
+      "attempt": 88,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 171
+    },
+    {
+      "attempt": 89,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 392
+    },
+    {
+      "attempt": 90,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 269
+    },
+    {
+      "attempt": 91,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 290
+    },
+    {
+      "attempt": 92,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 282
+    },
+    {
+      "attempt": 93,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 266
+    },
+    {
+      "attempt": 94,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 159
+    },
+    {
+      "attempt": 95,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 144
+    },
+    {
+      "attempt": 96,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 258
+    },
+    {
+      "attempt": 97,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 152
+    },
+    {
+      "attempt": 98,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 150
+    },
+    {
+      "attempt": 99,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 286
+    },
+    {
+      "attempt": 100,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 272
+    }
+  ],
+  "gemini-1.5-pro-latest": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9930
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9958
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10042
+    },
+    {
+      "attempt": 4,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 156
+    },
+    {
+      "attempt": 5,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 438
+    },
+    {
+      "attempt": 6,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 277
+    },
+    {
+      "attempt": 7,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 288
+    },
+    {
+      "attempt": 8,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 290
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10189
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9840
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9479
+    },
+    {
+      "attempt": 12,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 282
+    },
+    {
+      "attempt": 13,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    },
+    {
+      "attempt": 14,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 280
+    },
+    {
+      "attempt": 15,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 165
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9937
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9770
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10097
+    },
+    {
+      "attempt": 19,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 168
+    },
+    {
+      "attempt": 20,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 171
+    },
+    {
+      "attempt": 21,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 179
+    },
+    {
+      "attempt": 22,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 161
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9672
+    },
+    {
+      "attempt": 24,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9563
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9396
+    },
+    {
+      "attempt": 26,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 284
+    },
+    {
+      "attempt": 27,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 151
+    },
+    {
+      "attempt": 28,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 262
+    },
+    {
+      "attempt": 29,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 280
+    },
+    {
+      "attempt": 30,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 168
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10127
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9327
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10180
+    },
+    {
+      "attempt": 34,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 265
+    },
+    {
+      "attempt": 35,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 164
+    },
+    {
+      "attempt": 36,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 297
+    },
+    {
+      "attempt": 37,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 275
+    },
+    {
+      "attempt": 38,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 165
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9860
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10283
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9701
+    },
+    {
+      "attempt": 42,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 165
+    },
+    {
+      "attempt": 43,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 161
+    },
+    {
+      "attempt": 44,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 264
+    },
+    {
+      "attempt": 45,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 167
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9430
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9555
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9524
+    },
+    {
+      "attempt": 49,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 167
+    },
+    {
+      "attempt": 50,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 169
+    },
+    {
+      "attempt": 51,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 182
+    },
+    {
+      "attempt": 52,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 276
+    },
+    {
+      "attempt": 53,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 144
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9576
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9642
+    },
+    {
+      "attempt": 56,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 9445
+    },
+    {
+      "attempt": 57,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 297
+    },
+    {
+      "attempt": 58,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    },
+    {
+      "attempt": 59,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 167
+    },
+    {
+      "attempt": 60,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 302
+    },
+    {
+      "attempt": 61,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 176
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9746
+    },
+    {
+      "attempt": 63,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 9616
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9885
+    },
+    {
+      "attempt": 65,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 327
+    },
+    {
+      "attempt": 66,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 188
+    },
+    {
+      "attempt": 67,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 169
+    },
+    {
+      "attempt": 68,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 322
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9533
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9526
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9882
+    },
+    {
+      "attempt": 72,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 267
+    },
+    {
+      "attempt": 73,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 174
+    },
+    {
+      "attempt": 74,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 295
+    },
+    {
+      "attempt": 75,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 261
+    },
+    {
+      "attempt": 76,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 187
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10050
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10130
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9747
+    },
+    {
+      "attempt": 80,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 300
+    },
+    {
+      "attempt": 81,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 257
+    },
+    {
+      "attempt": 82,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 286
+    },
+    {
+      "attempt": 83,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 353
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9299
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9377
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 10122
+    },
+    {
+      "attempt": 87,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 224
+    },
+    {
+      "attempt": 88,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 287
+    },
+    {
+      "attempt": 89,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 178
+    },
+    {
+      "attempt": 90,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 303
+    },
+    {
+      "attempt": 91,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 294
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9446
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9426
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 9804
+    },
+    {
+      "attempt": 95,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 175
+    },
+    {
+      "attempt": 96,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 184
+    },
+    {
+      "attempt": 97,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 272
+    },
+    {
+      "attempt": 98,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 292
+    },
+    {
+      "attempt": 99,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 280
+    },
+    {
+      "attempt": 100,
+      "passed": 0,
+      "failed": 0,
+      "total": 0,
+      "responseTime": 172
+    }
+  ],
+  "gemini-2.0-flash": [
+    {
+      "attempt": 1,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4240
+    },
+    {
+      "attempt": 2,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4158
+    },
+    {
+      "attempt": 3,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4114
+    },
+    {
+      "attempt": 4,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4389
+    },
+    {
+      "attempt": 5,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4248
+    },
+    {
+      "attempt": 6,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4141
+    },
+    {
+      "attempt": 7,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4123
+    },
+    {
+      "attempt": 8,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4168
+    },
+    {
+      "attempt": 9,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4538
+    },
+    {
+      "attempt": 10,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4346
+    },
+    {
+      "attempt": 11,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4265
+    },
+    {
+      "attempt": 12,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4330
+    },
+    {
+      "attempt": 13,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4200
+    },
+    {
+      "attempt": 14,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4137
+    },
+    {
+      "attempt": 15,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4281
+    },
+    {
+      "attempt": 16,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4234
+    },
+    {
+      "attempt": 17,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4316
+    },
+    {
+      "attempt": 18,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4194
+    },
+    {
+      "attempt": 19,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4218
+    },
+    {
+      "attempt": 20,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4174
+    },
+    {
+      "attempt": 21,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4379
+    },
+    {
+      "attempt": 22,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4196
+    },
+    {
+      "attempt": 23,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4300
+    },
+    {
+      "attempt": 24,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 4137
+    },
+    {
+      "attempt": 25,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4353
+    },
+    {
+      "attempt": 26,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 3999
+    },
+    {
+      "attempt": 27,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4099
+    },
+    {
+      "attempt": 28,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4233
+    },
+    {
+      "attempt": 29,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4120
+    },
+    {
+      "attempt": 30,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4262
+    },
+    {
+      "attempt": 31,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4290
+    },
+    {
+      "attempt": 32,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4195
+    },
+    {
+      "attempt": 33,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4356
+    },
+    {
+      "attempt": 34,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4225
+    },
+    {
+      "attempt": 35,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4268
+    },
+    {
+      "attempt": 36,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4123
+    },
+    {
+      "attempt": 37,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4189
+    },
+    {
+      "attempt": 38,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4198
+    },
+    {
+      "attempt": 39,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4266
+    },
+    {
+      "attempt": 40,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4359
+    },
+    {
+      "attempt": 41,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4303
+    },
+    {
+      "attempt": 42,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4196
+    },
+    {
+      "attempt": 43,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4264
+    },
+    {
+      "attempt": 44,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4285
+    },
+    {
+      "attempt": 45,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4254
+    },
+    {
+      "attempt": 46,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4381
+    },
+    {
+      "attempt": 47,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4434
+    },
+    {
+      "attempt": 48,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4100
+    },
+    {
+      "attempt": 49,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4249
+    },
+    {
+      "attempt": 50,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4168
+    },
+    {
+      "attempt": 51,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4361
+    },
+    {
+      "attempt": 52,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4353
+    },
+    {
+      "attempt": 53,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4110
+    },
+    {
+      "attempt": 54,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4255
+    },
+    {
+      "attempt": 55,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4162
+    },
+    {
+      "attempt": 56,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4296
+    },
+    {
+      "attempt": 57,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4342
+    },
+    {
+      "attempt": 58,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4248
+    },
+    {
+      "attempt": 59,
+      "passed": 0,
+      "failed": 32,
+      "total": 32,
+      "responseTime": 4363
+    },
+    {
+      "attempt": 60,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4078
+    },
+    {
+      "attempt": 61,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4132
+    },
+    {
+      "attempt": 62,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4245
+    },
+    {
+      "attempt": 63,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4173
+    },
+    {
+      "attempt": 64,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4114
+    },
+    {
+      "attempt": 65,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4284
+    },
+    {
+      "attempt": 66,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4097
+    },
+    {
+      "attempt": 67,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4252
+    },
+    {
+      "attempt": 68,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4225
+    },
+    {
+      "attempt": 69,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4245
+    },
+    {
+      "attempt": 70,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4368
+    },
+    {
+      "attempt": 71,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4323
+    },
+    {
+      "attempt": 72,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4209
+    },
+    {
+      "attempt": 73,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4175
+    },
+    {
+      "attempt": 74,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 4140
+    },
+    {
+      "attempt": 75,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4094
+    },
+    {
+      "attempt": 76,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4095
+    },
+    {
+      "attempt": 77,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4205
+    },
+    {
+      "attempt": 78,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4310
+    },
+    {
+      "attempt": 79,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4256
+    },
+    {
+      "attempt": 80,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4259
+    },
+    {
+      "attempt": 81,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4069
+    },
+    {
+      "attempt": 82,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4309
+    },
+    {
+      "attempt": 83,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4459
+    },
+    {
+      "attempt": 84,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4135
+    },
+    {
+      "attempt": 85,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4310
+    },
+    {
+      "attempt": 86,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4331
+    },
+    {
+      "attempt": 87,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4031
+    },
+    {
+      "attempt": 88,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4369
+    },
+    {
+      "attempt": 89,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4354
+    },
+    {
+      "attempt": 90,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4208
+    },
+    {
+      "attempt": 91,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4231
+    },
+    {
+      "attempt": 92,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4276
+    },
+    {
+      "attempt": 93,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4193
+    },
+    {
+      "attempt": 94,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4141
+    },
+    {
+      "attempt": 95,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4162
+    },
+    {
+      "attempt": 96,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4247
+    },
+    {
+      "attempt": 97,
+      "passed": 28,
+      "failed": 4,
+      "total": 32,
+      "responseTime": 4315
+    },
+    {
+      "attempt": 98,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4249
+    },
+    {
+      "attempt": 99,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4304
+    },
+    {
+      "attempt": 100,
+      "passed": 32,
+      "failed": 0,
+      "total": 32,
+      "responseTime": 4107
+    }
+  ]
+}

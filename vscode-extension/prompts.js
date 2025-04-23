@@ -109,4 +109,8 @@ const getSolidFixPrompt = (principle, issue, recommendation, codeToFix, fileLang
     IMPORTANT: Return ONLY the JSON object with no additional text before or after it. Do not include any explanations, markdown formatting, or code blocks outside the JSON structure.
     `;
 
-module.exports = { documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts, SolidPrinciples, getSolidRecommendationPrompt, getSolidFixPrompt };
+function getPrompt(prompts, languageId) {
+    return prompts[languageId] || prompts.default;
+}
+
+module.exports = { getPrompt, documentationPrompts, refactoringPrompts, explanationPrompts, generationPrompts, testingPrompts, SolidPrinciples, getSolidRecommendationPrompt, getSolidFixPrompt };
