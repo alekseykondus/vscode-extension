@@ -163,7 +163,7 @@ input::-webkit-calendar-picker-indicator {
 .file-input-group::after {
     content: "";
     position: absolute;
-    right: 125px; /* Adjusted to be before the button */
+    right: 125px;
     top: 50%;
     transform: translateY(-50%);
     width: 16px;

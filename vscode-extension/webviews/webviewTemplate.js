@@ -2,9 +2,13 @@ const OperationType = require('./../operationTypes');
 const { logInfo, logError, logDebug } = require('./../logger');
 const fs = require('fs');
 const path = require('path');
+const vscode = require("vscode");
 
 function getWebviewContent(code, currentModel, operationType, testData = null) {
-    const styles = fs.readFileSync(path.resolve(__dirname, 'css/webviewTemplateStyles.css'), 'utf-8');
+    const isLightTheme = vscode.window.activeColorTheme.kind === vscode.ColorThemeKind.Light;
+    const styles = isLightTheme
+        ? fs.readFileSync(path.resolve(__dirname, 'css/webviewTemplateStyles_LightTheme.css'), 'utf-8')
+        : fs.readFileSync(path.resolve(__dirname, 'css/webviewTemplateStyles_DarkTheme.css'), 'utf-8');
     const scripts = fs.readFileSync(path.resolve(__dirname, 'js/webviewTemplateScript.js'), 'utf-8');
 
     const isTesting = operationType === OperationType.TESTING;
@@ -21,12 +25,12 @@ function getWebviewContent(code, currentModel, operationType, testData = null) {
             .test-file-section {
                 margin: 15px;
                 display: ${isTesting ? 'block' : 'none'};
-                background: #2d2d2d;
+                background: ${isLightTheme ? '#e0e0e0' : '#2d2d2d'};
                 padding: 15px;
                 border-radius: 4px;
             }
         </style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/${isLightTheme ? 'atom-one-light.min.css' : 'atom-one-dark.min.css'}">
     </head>
     <body>
         ${getModelSelectorHTML(currentModel)}

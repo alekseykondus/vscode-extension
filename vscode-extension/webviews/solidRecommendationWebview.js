@@ -2,6 +2,7 @@ const { formatTextAsHTML, escapeHtml } = require('./../textFormatterToHtml');
 const { getModelSelectorHTML } = require('./webviewTemplate');
 const fs = require('fs');
 const path = require('path');
+const vscode = require("vscode");
 
 /**
  * Отримує HTML-контент для вебв'ю відображення SOLID рекомендацій
@@ -11,7 +12,9 @@ const path = require('path');
  * @returns {string} - HTML-контент
  */
 function getSolidRecommendationWebviewContent(principleCode, issue, detailedRecommendation, currentModel) {
-    const styles = fs.readFileSync(path.resolve(__dirname, 'css/solidRecommendationStyles.css'), 'utf-8');
+    const styles = vscode.window.activeColorTheme.kind === vscode.ColorThemeKind.Light
+        ? fs.readFileSync(path.resolve(__dirname, 'css/solidRecommendationStyles_LightTheme.css'), 'utf-8')
+        : fs.readFileSync(path.resolve(__dirname, 'css/solidRecommendationStyles_DarkTheme.css'), 'utf-8');
     const scripts = fs.readFileSync(path.resolve(__dirname, 'js/solidScripts.js'), 'utf-8');
 
     return `

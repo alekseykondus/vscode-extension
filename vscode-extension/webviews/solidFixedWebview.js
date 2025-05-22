@@ -3,9 +3,13 @@ const { getModelSelectorHTML } = require('./webviewTemplate');
 const { cleanCodeFromMarkdown } = require('./../aiService');
 const fs = require('fs');
 const path = require('path');
+const vscode = require("vscode");
 
 function getSolidFixedWebviewContent(refactoringPlan, principle, issue, currentModel) {
-    const styles = fs.readFileSync(path.resolve(__dirname, 'css/solidRecommendationStyles.css'), 'utf-8');
+    const isLightTheme = vscode.window.activeColorTheme.kind === vscode.ColorThemeKind.Light;
+    const styles = isLightTheme
+    ? fs.readFileSync(path.resolve(__dirname, 'css/solidRecommendationStyles_LightTheme.css'), 'utf-8')
+    : fs.readFileSync(path.resolve(__dirname, 'css/solidRecommendationStyles_DarkTheme.css'), 'utf-8');
     const scripts = fs.readFileSync(path.resolve(__dirname, 'js/solidScripts.js'), 'utf-8');
 
     return `
@@ -16,7 +20,7 @@ function getSolidFixedWebviewContent(refactoringPlan, principle, issue, currentM
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>SOLID Refactoring: ${escapeHtml(principle)}</title>
         <style>${styles}</style>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/${isLightTheme ? 'atom-one-light.min.css' : 'atom-one-dark.min.css'}">
     </head>
         <body>
             ${getModelSelectorHTML(currentModel)}
