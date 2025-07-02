@@ -27,21 +27,34 @@ const anthropic = new Anthropic({
 
 const gemini = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
-function cleanCodeFromMarkdown(response) {
+const vscode = require("vscode");
+function cleanCodeFromMarkdown(response, language = vscode.window.activeTextEditor?.document.languageId) {
     logDebug("Cleaning markdown from response");
     try {
         const markdownRegex = /```(?:\w+)?\n([\s\S]*?)\n```/;
         const match = response.match(markdownRegex);
-        
-        if (match && match[1]) {
-            logDebug("Markdown code block found and cleaned");
-            return match[1].trim();
+        let cleanedCode = match && match[1] ? match[1].trim() : response.trim();
+
+        logDebug(match && match[1] ? "Markdown code block found and cleaned" : "No markdown code blocks found");
+
+        const unsafePatterns = {
+            javascript: /\b(eval|Function|setTimeout\s*\(\s*['"][^'"]+['"]|setInterval\s*\(\s*['"][^'"]+['"]|XMLHttpRequest|fetch|location\.href|document\.write)\b/,
+            python: /\b(eval|exec|compile|os\.system|subprocess\.run|eval)\b/,
+            java: /\b(javax\.script\.ScriptEngine|java\.lang\.reflect\.Method\.invoke|Runtime\.getRuntime|ProcessBuilder)\b/,
+            default: /\b(eval|exec|new\s+Function|setTimeout|setInterval|XMLHttpRequest|fetch|location\.href|document\.write)\b/
+        };
+
+        const pattern = unsafePatterns[language] || unsafePatterns.default;
+        if (pattern.test(cleanedCode)) {
+            logError(`Unsafe constructs detected in ${language} code: ${cleanedCode}`);
+            throw new Error(`Code contains unsafe constructs (e.g., eval, exec, or similar) and cannot be processed for safety reasons.`);
         }
-        logDebug("No markdown code blocks found");
-        return response.trim();
+
+        logDebug("Code passed safety check");
+        return cleanedCode;
     } catch (error) {
-        logError(`Markdown cleaning failed: ${error.message}`);
-        return response.trim();
+        logError(`Markdown cleaning or safety check failed: ${error.message}`);
+        return "Markdown cleaning or safety check failed, code contains unsafe constructs (e.g., eval, exec, or similar) and cannot be processed for safety reasons.";
     }
 }
 
