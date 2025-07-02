@@ -7,10 +7,10 @@ const documentationPrompts = {
 };
 
 const refactoringPrompts = {
-    javascript: "Refactor the following JavaScript code to improve readability, performance, and maintainability. Use modern ES6+ features where applicable and follow best practices. Return only the refactored code without any additional text or Markdown wrappers.",
-    python: "Refactor the following Python code to enhance clarity, efficiency, and adherence to PEP 8 style guidelines. Optimize where possible. Return only the refactored code without any additional text or Markdown wrappers.",
-    java: "Refactor the following Java code to improve readability and efficiency within its existing structure. Optimize the code without adding new classes or significant structural changes unless explicitly required. Follow Java naming conventions and best practices. Return only the refactored code without any additional text or Markdown wrappers.",
-    default: "Refactor the following code to make it more readable, efficient, and maintainable, following best practices for its programming language. Return only the refactored code without any additional text or Markdown wrappers."
+    javascript: "Refactor the following JavaScript code to improve readability, performance, and maintainability. Use modern ES6+ features where applicable and follow best practices. Do not use unsafe functions such as eval, Function constructor, or dynamic code execution via setTimeout/setInterval with string arguments. Return only the refactored code without any additional text or Markdown wrappers.",
+    python: "Refactor the following Python code to enhance clarity, efficiency, and adherence to PEP 8 style guidelines. Optimize where possible. Do not use unsafe functions such as eval, exec, or compile for dynamic code execution. Return only the refactored code without any additional text or Markdown wrappers.",
+    java: "Refactor the following Java code to improve readability and efficiency within its existing structure. Optimize the code without adding new classes or significant structural changes unless explicitly required. Follow Java naming conventions and best practices. Do not use unsafe dynamic code execution constructs, such as ScriptEngine or reflection for executing arbitrary code. Return only the refactored code without any additional text or Markdown wrappers.",
+    default: "Refactor the following code to make it more readable, efficient, and maintainable, following best practices for its programming language. Avoid using unsafe functions or constructs for dynamic code execution, such as eval, exec, or similar mechanisms. Return only the refactored code without any additional text or Markdown wrappers."
 };
 
 const explanationPrompts = {
